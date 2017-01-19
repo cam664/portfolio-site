@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    margin: -40px auto;
+    width: 505px;
+    height: 606px;
+    position: relative;
+}
+
+.HUD {
+    font-size: 20px;
+    font-family: 'Fredoka One';
+    background-color: white;
+    height: 60px;
+    position: relative;
+    bottom: -50px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    z-index: 3;
+}
+
+#menu {
+    display: block;
+    position: absolute;
+    top: 110px;
+    border-radius: 5px;
+    width: 505px;
+    height: 535px;
+    background: rgba(0,0,0,0.6);
+    z-index: 2;
+}
+
+.charModels {
+    margin: -30px auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.charModels img:hover {
+    cursor: pointer;
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    -webkit-filter: drop-shadow(0px -5px 3px white);
+    filter: drop-shadow(0px -5px 3px white);
+    -webkit-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+}
+
+h3{
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin: 160px auto 0 auto;
+    color: white;
+    font-family: 'Fredoka One';
+}
+
+button {
+    font-size: 20px;
+    font-family: 'Fredoka One';
+    display: block;
+    border: 1px solid white;
+    background-color: white;
+    padding: 4px 16px;
+    margin: 35px auto;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+canvas {
+    position: absolute;
+}

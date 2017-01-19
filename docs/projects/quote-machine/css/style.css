@@ -1,0 +1,135 @@
+@import "https://fonts.googleapis.com/css?family=Nunito:400,700";
+@keyframes gradientShift {
+  0% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+.container {
+  height: 420px;
+  position: relative;
+  margin: 120px 0;
+  text-align: center;
+}
+
+.crystal-ball {
+  margin: 50px auto;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 100%;
+  z-index: -1;
+  background: linear-gradient(45deg, #14F5A2, #F55651, #23A5C2, #C2235F);
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+  opacity: 1;
+}
+.crystal-ball:before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 0;
+  left: calc(50% - 250px);
+  border-radius: 50%;
+  z-index: 1;
+  background: radial-gradient(circle at 50% 120%, #81e8f6, #76deef 10%, #055194 80%, #062745 100%);
+  filter: blur(6px);
+  opacity: .7;
+}
+.crystal-ball:after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 0;
+  left: calc(50% - 250px);
+  border-radius: 50%;
+  z-index: 1;
+  background: radial-gradient(circle at 50% 0px, #ffffff, rgba(255, 255, 255, 0) 58%);
+  filter: blur(6px);
+  opacity: .6;
+}
+
+#text, #author {
+  width: 400px;
+  position: absolute;
+  max-height: 400px;
+  padding: 30px 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  background: linear-gradient(45deg, #14F5A2, #F55651, #23A5C2, #C2235F);
+  background-size: 400% 400%;
+  font-size: 26px;
+  animation: gradientShift 25s ease infinite;
+  opacity: 0;
+  z-index: 1;
+  color: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: url(#turb);
+  text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.5);
+}
+
+#author {
+  font-style: italic;
+  margin: 200px 0;
+}
+
+.button {
+  box-shadow: 0px 0px 2px 1px #fff;
+  text-shadow: 0px 0px 0.2px #000;
+  border-radius: 17px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+  background: radial-gradient(circle at 50% 120%, #22d7ef, #1bc8e4 10%, #61b6b9 80%, #50aeb1 100%);
+  box-sizing: border-box;
+  padding: 7px;
+  margin: 0 auto;
+}
+.button:hover {
+  background: linear-gradient(45deg, #14F5A2, #F55651, #23A5C2, #C2235F);
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+}
+.button:active {
+  box-shadow: 0px 0px 0px 0px #fff;
+  text-shadow: 0px 0px 0px #000;
+}
+
+#new-quote {
+  margin: 15px auto;
+  width: 170px;
+  height: 40px;
+}
+
+#tweet-quote {
+  height: 40px;
+  display: block;
+  border-radius: 12px;
+  width: 50px;
+  padding: 8px;
+}
+#tweet-quote i {
+  color: white;
+  font-size: 25px;
+}
+
+body {
+  background: #011014;
+  min-width: 500px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
