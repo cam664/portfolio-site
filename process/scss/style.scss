@@ -14,29 +14,19 @@
 
 
 
-$grad-blue: lighten(#3D7EAA,10);
-$grad-yellow: lighten(#FFF10D, 10);
+$bright-blue: lighten(#3D7EAA,10);
 
-$contact-blue: #3494E6;
-$contact-purple: #EC6EAD;
+$blue-lightest: lighten(#2c3e50,36);
+$blue-light: lighten(#2c3e50,22);
+$blue-dark: #2c3e50;
 
 $purple: #9c719b;
+
 $yellow: #DBAD6A;
-$blue: #279AF1;
-$dark-green: #2A3D45;
-$light-green: #335C67;
 
-$teal: #129490;
-$teal2: #00FFC5;
-$green-accent: #5db952;
-$green-accent2: #61FF7E;
-$green-accent3:#16F4D0;
-
-$black-dark: #3d3d3d;
-$black-lighter: #3a3a3a;
 $black-lightest: #4a4a4a;
-
-$border: #2c3e50;
+$black-light: #3a3a3a;
+$black-dark: #3d3d3d;
 
 @keyframes heading {
     from {
@@ -143,7 +133,7 @@ nav {
     width: 0%;
     height: 2px;
     content: '';
-    background: lighten(#2c3e50,22);
+    background: $blue-light;
     transition: all 0.3s;
 }
 
@@ -168,7 +158,7 @@ nav {
     width: 100%;
     height: 2px;
     content: '';
-    background: lighten(#2c3e50,22);
+    background: $blue-light;
     transition: all 0.3s;
 }
 
@@ -193,9 +183,7 @@ ul {
 ul li {
     font-family: 'Montserrat';
     font-size: 1.2rem;
-    /*padding-right: 20px;*/
-    /*margin-right: 20px;*/
-    color: $black-lighter;
+    color: $black-light;
     display: inline-block;
     
     @include for-tablet-portrait-down {
@@ -213,15 +201,14 @@ header {
     overflow: hidden;
     position: relative;
     height: 100vh;
-    /*border: 30px solid #2c3e50;*/
-    background: url(../img/yellow-bg.jpg);/*linear-gradient(to right bottom, $landing-grad-yellow, $landing-grad-blue 70%)*/;
+    background: url(../img/yellow-bg.jpg);
     cursor: default;
     background-size: cover;
 }
 
 .logo-svg {
     transform-origin: center center;
-    filter: drop-shadow(0px 1px 2px $yellow/*mix(white,#c69c39,30)*/)
+    filter: drop-shadow(0px 1px 2px $yellow)
 }
 
 .tilt-container {
@@ -264,13 +251,13 @@ header {
 }
 
 .heading-primary {
-    margin: -105px auto;
+    margin: -80px auto;
     font-family: 'heading italic', sans-serif;
     font-weight: 700;
     font-size: 8.5rem;
     letter-spacing: 5px;
-    color: lighten(#2c3e50,22);
-    text-shadow: -0.5px -0.5px 3px $yellow/*mix(white,#c69c39,40)*/;
+    color: $blue-light;
+    text-shadow: -0.5px -0.5px 3px $yellow;
     
     @include for-tablet-landscape-down {
         font-size: 7rem;
@@ -286,6 +273,10 @@ header {
         font-size: 4rem;
         margin: -15px auto;
     }
+    
+    @media (min-width: 1750px) {
+        font-size: 10rem;
+    }
 }
 
 .heading-sub {
@@ -293,9 +284,9 @@ header {
     font-family: 'heading', sans-serif;
     font-size: 5rem;
     letter-spacing: 3px;
-    color: lighten(#2c3e50,36);
+    color: $blue-lightest;
     text-shadow: -0.5px -0.5px 3px $yellow/*mix(white,#c69c39,40)*/;
-    margin: 140px auto 35px;
+    margin: 120px auto 40px;
     
     @include for-tablet-landscape-down {
         font-size: 3.5rem;
@@ -311,6 +302,10 @@ header {
         font-size: 2.4rem;
         margin: 40px auto 35px;
     }
+    
+    @media (min-width: 1750px) {
+        font-size: 6.5rem;
+    }
 }
 
 .depth-1 {
@@ -324,10 +319,10 @@ header {
 }
 
 .project-btn {
-	background-color: lighten(#2c3e50,22);
+	background-color: $blue-light;
 	border-radius:28px;
     transform-origin: center center;
-	border: 2px solid lighten(#2c3e50,36);
+	border: 2px solid $blue-lightest;
 	display: inline-block;
 	cursor: pointer;
     transition: all 0.2s ease-in-out;
@@ -346,8 +341,8 @@ header {
 	   padding:7px 30px 7px 35px;
     }
     &:hover {
-        border:2px solid lighten(#2c3e50,22);
-        background-color: lighten(#2c3e50,36);
+        border:2px solid $blue-light;
+        background-color: $blue-lightest;
     }
 }
 
@@ -376,7 +371,7 @@ main {
     background: transparent;
     cursor: pointer;
     transition: all 0.2s ease-in;
-    max-width: 1850px;
+    max-width: 1750px;
     h2 {
         font-size: 2rem;
         font-weight: 300;
@@ -459,7 +454,7 @@ main {
     float: right;
     border: 3px solid #fff;
     border-bottom: 1.5px solid #fff;
-    box-shadow: 0 0 1px transparentize($black-lighter, 0.2);
+    box-shadow: 0 0 1px transparentize($black-light, 0.2);
 
     @include for-tablet-landscape-down {
         min-width: 280px;
@@ -484,7 +479,7 @@ main {
 
 .icon-link {
     position: relative;
-    z-index: 5;
+    z-index: z(icon-link);
     margin-top: 30px;
     display: inline-flex;
     align-items: center;
@@ -515,7 +510,7 @@ main {
     background-size: cover;
     margin: -100px auto;
     font-family: 'Lato', sans-serif;
-    /*background-color: $border;*/
+    /*background-color: $blue-dark;*/
     /*clip-path: polygon(50% 0, 100% 10%, 100% 90%, 50% 100%, 0% 90%, 0% 10%);
     clip-path: polygon(50% 0, 100% 15%, 100% 100%, 0% 100%, 0% 15%);
     clip-path: url("#pointy-clip-path");*/
@@ -539,22 +534,21 @@ main {
         font-weight: 600;
         color: $yellow;
     }
-    @media (min-width: 1740px) {
-        background: $border;
-        clip-path: polygon(50% 0, 100% 10%, 100% 90%, 50% 100%, 0% 90%, 0% 10%);
+    @include for-big-desktop-up {
+        background-size: 100% 100%;
     }
 }
 
 .headshot {
     position: relative;
-    z-index: 5;
+    z-index: z(headshot);
     width: 250px;
     height: 250px;
     border-radius: 20px;
     margin: 0 auto;
     /*transform: rotate(134.5deg);*/
     background-color: #fff;
-    border: 15px solid $grad-blue;
+    border: 15px solid $bright-blue;
     /*box-shadow: 0 0 4px 1px $landing-grad-blue;*/
     overflow: hidden;
     
@@ -572,12 +566,12 @@ main {
 .page-wrapper {
     background: #fff;
     position: relative;
-    z-index: 5;
+    z-index: z(page-wrapper);
 }
 
 #skills {
     margin: 0 auto;
-    padding: 350px 8% 300px 8%;
+    padding: 260px 8% 60px 8%;
     box-shadow: 0 1px 1px rgba(255,255,255,1);
     max-width: 1850px;
     @include for-phone-only {
@@ -602,7 +596,7 @@ main {
 .skills-wrapper {
     perspective: 500px;
     transform-style: preserve-3d;
-    height: 200px;
+    height: 150px;
     @include for-phone-only {
         margin-top: -150px;
     }
@@ -612,7 +606,7 @@ main {
     .#{shelf}-#{$i} {
         height: 90px;
         background: $purple;
-        transform: rotateX(60deg) translateZ(-#{$i}px);
+        transform: rotateX(65deg) translateZ(-#{$i}px);
         
         @include for-phone-only {
             background: transparent;
@@ -671,7 +665,7 @@ main {
     width: 112px;
     display: inline-block;
     transform-origin: center bottom;
-    transform: rotateX(-60deg);
+    transform: rotateX(-65deg);
     position: relative;
     bottom: 28px;
     filter: drop-shadow(0 3.5px 3px rgba(0,0,0,0.29));
@@ -706,16 +700,20 @@ main {
         }
     }
     &:hover {
-        transform: rotateX(-60deg) translate(0, -7px);
+        transform: rotateX(-65deg) translate(0, -7px);
         filter: drop-shadow(0 7.5px 3px rgba(0,0,0,0.18));
     }
 }
 
-.school {
+#school {
+    @include clearfix();
+    padding: 50px 8% 70px 8%;
+    background: #ddd;
+}
+
+.school-wrapper {
     width: 50%;
-    margin: -50px auto;
     float: right;
-    padding: 15px 17px;
     
     @include for-tablet-landscape-down {
         width: 65%;
@@ -742,7 +740,7 @@ main {
     }
     h5 {
         font-size: 1.1rem;
-        color: $black-lighter;
+        color: $black-light;
         font-family: 'Lato', sans-serif;
         font-weight: 400;
         letter-spacing: 0.2px;
@@ -752,7 +750,7 @@ main {
     }
     p {
         padding: 10px 0 0 0;
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         font-family: 'Lato', sans-serif;
         color: $black-dark;
         font-weight: 300;
@@ -770,8 +768,8 @@ main {
 
 #contact {
     position: fixed;
-    z-index: 0;
-    background: /*linear-gradient(to right bottom, $grad-blue, $green-accent2)*/$border;
+    z-index: z(contact);
+    background: $blue-dark;
     height: 100vh;
     padding: 0 8% 0 8%;
     width: 100%;

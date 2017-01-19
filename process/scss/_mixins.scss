@@ -1,7 +1,3 @@
-@function calcSize($num) {
-    @return 100% / ($num / 0.94); 
-}
-
 @mixin clearfix() {
     &:before,
     &:after {
@@ -11,6 +7,23 @@
     &:after {
         clear: both;
     }
+}
+
+$z-layers: (
+    icon-link: 5,
+    headshot: 5,
+    page-wrapper: 5,
+    contact: 0,
+    
+);
+
+@function z($key) {
+  @if map-has-key($z-layers, $key) {
+    @return map-get($z-layers, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $z-layers.";
+  @return null;
 }
 
 @mixin for-phone-only {
@@ -25,10 +38,7 @@
     @media (max-width: 1200px) { @content; }
 }
 
-@mixin for-desktop-up {
-    @media (min-width: 1200px) { @content; }
+@mixin for-big-desktop-up {
+    @media (min-width: 1650px) { @content; }
 }
 
-@mixin for-big-desktop-up {
-    @media (min-width: 1800px) { @content; }
-}

@@ -60,6 +60,7 @@ $(document).on('scroll', function () {
     var $elSkills = $('#skills');
     var $navContact = $('.nav-contact');
     var $elContact = $('#contact-spacer');
+    var $elSchool = $('#school');
     
     //navbar show/hide toggle
     if (distance >= 50) {
@@ -82,7 +83,7 @@ $(document).on('scroll', function () {
         $navAbout.removeClass('nav-active');
     }
     
-    if (distance + offset > $elSkills.offset().top && distance + offset < $elSkills.offset().top + $elSkills.outerHeight(true)/* + 180*/) {
+    if (distance + offset > $elSkills.offset().top && distance + offset < $elSkills.offset().top + ($elSkills.outerHeight(true) + $elSchool.outerHeight(true))) {
         $navSkills.addClass('nav-active');
     } else {
         $navSkills.removeClass('nav-active');

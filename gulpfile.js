@@ -7,7 +7,7 @@ var gulp = require('gulp'),
 
 gulp.task('scripts', function(){
     gulp.src('process/js/*.js')
-    .pipe(plumber())//stops gulp from cancelling watch cmd on syntax error
+    .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(uglify())
     .pipe(sourcemaps.write('../maps'))
@@ -15,10 +15,10 @@ gulp.task('scripts', function(){
 });
 
 gulp.task('styles', function(){
-    gulp.src('process/scss/**/*.scss')//find all .scss files in scss folder
+    gulp.src('process/scss/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
-        /*outputStyle: 'compressed'*/
+        outputStyle: 'compressed'
     }).on('error', sass.logError))
     .pipe(prefix('> 5%'))
     .pipe(sourcemaps.write('../maps'))
@@ -28,8 +28,8 @@ gulp.task('styles', function(){
 //Watch Task
 gulp.task('watch', function(){
 
-    gulp.watch('process/js/*.js', ['scripts']);//watch .js files in js folder for changes, on change run task 'scripts'
+    gulp.watch('process/js/*.js', ['scripts']);
     gulp.watch('process/scss/**/*.scss', ['styles']);
 });
 
-gulp.task('default', ['scripts', 'styles', 'watch']);//default task. Run by typing 'gulp' in node terminal.
+gulp.task('default', ['scripts', 'styles', 'watch']);
