@@ -1,0 +1,208 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: Nexa;
+    src: url(nexa-rust.otf);
+}
+
+@font-face {
+    font-family: Corbel;
+    src: url(corbel.ttf);
+}
+
+@font-face {
+    font-family: CorbelBold;
+    src: url(corbelb.ttf);
+}
+
+body, html {
+	width:100%;
+	height:100%;
+	margin:0;
+	overflow: hidden;
+	}
+
+#mainNav {
+	list-style-type: none;
+	padding-top: 10px;
+	padding-left: 290px;
+	padding-bottom: 0;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 290px;
+	}
+
+.mainLi {
+	display: inline;
+	font-family: CorbelBold;
+	color: black;
+	font-size: 35px;
+	padding-right: 28px;
+	}
+
+ 
+#logo {
+	width: 220px;
+	margin-right: 640px;
+	}
+
+header {
+	text-align:center;
+	width: 100%;
+	margin: 0 auto;
+	background-color: white;
+	padding-top: 0px;
+	}
+	
+h1 {
+	display: block;
+	margin-top: -130px;
+	margin-right: 0;
+	margin-left: 260px;
+	margin-bottom: 0;
+	font-family: Nexa;
+	}
+	
+#headNav {
+	margin: 0 auto;
+	z-index: -1;
+	width: 100%;
+	height:60px;
+	background-color: #E6591E;
+	}
+	
+.btn {
+	transition: .4s ease;
+	cursor: pointer;
+	}
+	
+.btn:hover {
+	transform: scale(1.1);
+	}
+	
+.btn:active {
+	transform: scale(1.1);
+	}
+	
+/*//////////////////////Instructions/////////////////////////*/
+/*//////////////////////Fry Instr Nav/////////////////////////*/
+
+#slide_01 {
+	z-index: -2;
+	position: absolute;
+	width:100%;
+	height:100%;
+	background-image:url(../img/frycutter_Fires_Removed.jpg);
+    background-size:cover;
+    background-position: bottom;
+	}
+
+#slide_02 {
+	z-index: -2;
+	position: absolute;
+	width:100%;
+	height:100%;
+	background-image:url(../img/cut-fries-water.jpg);
+    background-size:cover;
+    background-position: bottom;
+	}
+
+#slide_03 {
+	z-index: -2;
+	position: absolute;
+	width:100%;
+	height:100%;
+	background-image:url(../img/slidePic03_2.jpg);
+    background-size:cover;
+	}
+
+#slide_04 {
+	z-index: -2;
+	position: absolute;
+	width:100%;
+	height:100%;
+	background-image:url(../img/fries_deep-fryer.jpg);
+    background-size:cover;
+    background-position: bottom;
+	}
+
+#slide_05 {
+	z-index: -2;
+	position: absolute;
+	width:100%;
+	height:100%;
+	background-image:url(../img/finished-fries.jpg);
+    background-size:cover;
+    background-position: bottom;
+	}
+	
+aside {
+	width: 280px;
+	height: auto;
+	min-height: 300px;
+	background-color: rgba(255,255,255,0.80);
+	position: relative;
+    left: 3%;
+	border-radius: 2px;
+	padding: 0;
+	border-top: medium dotted #E6591E;
+	border-bottom: medium dotted #E6591E;
+	border-collapse: collapse;
+	margin-top:110px;
+	}
+
+#fryUL {
+	list-style: none;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 0px;
+    padding: 7px 0 7px;
+	border-top: medium dotted #E6591E;
+    border-radius: 0px;
+	margin-top:48px;
+	background-color: rgba(255,255,255,0.80);
+	width:280px;
+    position: fixed;
+    left: 3%;
+	}
+	
+.fryLi {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	font-family: Nexa;
+	border: 5px solid #111111;
+	border-radius: 7px;
+	color: black;
+	font-size: 30px;
+	text-align: center;
+	text-decoration: none;
+	margin-left: 7px;
+	}
+
+.fryLi a {
+	text-decoration: none;	
+	color:#111111;
+	}
+
+.fryLi:hover{
+	background-color: #e6591e;
+	}
+
+.fryLi:active {
+	background-color: #e6591e;
+	}
+	
+p {
+	font-family: Corbel;
+	font-size: 20px;
+	margin-top: 7px;
+	margin-left: 3px;
+	padding-top: 10px;
+	}
+	
