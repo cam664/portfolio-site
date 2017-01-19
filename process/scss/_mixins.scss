@@ -10,11 +10,13 @@
 }
 
 $z-layers: (
+    heading-wrapper: 1,
     icon-link: 5,
     headshot: 5,
     page-wrapper: 5,
     contact: 0,
-    
+    nav: 99,
+    loading-screen: 1000
 );
 
 @function z($key) {

@@ -68,8 +68,7 @@ $(document).on('scroll', function () {
     } else {
         $nav.css('transform', 'translate(0, -146px)');
     }
-    
-    console.log(height);
+
     //nav section indicator
     if (distance + offset > $elProjects.offset().top && distance + offset < $elProjects.offset().top + $elProjects.outerHeight(true)) {
         $navProjects.addClass('nav-active');
@@ -89,19 +88,12 @@ $(document).on('scroll', function () {
         $navSkills.removeClass('nav-active');
     }
     
-    /*if (height >= tabletPortrait) {
-        if (distance + offset >= 4400) {
-            $navContact.addClass('nav-active');    
-        } else {
-            $navContact.removeClass('nav-active');
-        }
-    } else */if (distance + offset > $elContact.offset().top /*&& distance + offset < $elContact.offset().top + $elContact.height()*/) {
-            $navContact.addClass('nav-active')        
-        } else {
-            $navContact.removeClass('nav-active');
-        }
-    
-    
+    if (distance + offset > $elContact.offset().top /*&& distance + offset < $elContact.offset().top + $elContact.height()*/) {
+        $navContact.addClass('nav-active')        
+    } else {
+        $navContact.removeClass('nav-active');
+    }
+
 });
 
 //smooth scroll to anchor elements
