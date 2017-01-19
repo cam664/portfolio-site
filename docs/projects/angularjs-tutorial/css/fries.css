@@ -1,0 +1,34 @@
+@font-face {
+    font-family: Nexa;
+    src: url(nexa-rust.otf);
+}
+
+ul {
+	list-style: none;
+	}
+	
+li {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	font-family: Nexa;
+	border: 5px solid #111111;
+	border-radius: 7px;
+	color: black;
+	font-size: 30px;
+	text-align: center;
+	text-decoration: none;
+	}
+	
+li a {
+	text-decoration: none;	
+	color:#111111
+	}
+
+li:hover{
+	background-color: #e6591e;
+	}
+
+li:active {
+	background-color: #e6591e;
+	}
