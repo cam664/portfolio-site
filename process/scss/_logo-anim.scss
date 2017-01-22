@@ -16,10 +16,10 @@ $shape6: darken(#7692FF,4);
 
 @keyframes shapeFlipY {
     from {
-        transform: rotatey(90deg);
+        transform: rotate3d(0,1,0,90deg);
     }
     to {
-        transform: rotatey(0deg);
+        transform: rotate3d(0,1,0,0deg);
     }
 }
 
@@ -97,35 +97,79 @@ $shape6: darken(#7692FF,4);
 
 #shape-2 {
     fill: $shape2;
-    
-    transform-origin: right bottom;
-    transform: rotatey(90deg);
+    -webkit-transform-origin: right bottom;
+    FIREFOXtransform-origin: center bottom;
+    transform: rotate3d(0,1,0,90deg);
 }
 
 #shape-3 {
     fill: $shape3;
     
-    transform-origin: top left;
+    transform-origin: left top;
     transform: rotate3d(1.732,1,0,90deg);
 }
 
 #shape-4 {
     fill: $shape4;
     
-    transform-origin: top right;
+    transform-origin: right top;
     transform: rotate3d(-1.732 , 1 , 0 , 90deg);
 }
 
 #shape-5 {
     fill: $shape5;
-    
+    -webkit-transform-origin: center bottom;
     transform-origin: left top;
-    transform: rotatey(90deg);
+    transform: rotate3d(0,1,0,90deg);
 }
 
 #shape-6 {
     fill: $shape6;
     
-    transform-origin: center center;
+    transform-origin: left center;
     opacity: 0;
+}
+
+@-moz-document url-prefix() {
+    #shape-1 {
+        fill: $shape1;
+
+        transform-origin: center/* bottom*/;
+        transform: rotate3d(-1.732 , 1 , 0 , 90deg);
+
+    }
+
+    #shape-2 {
+        fill: $shape2;
+        transform-origin: center/* bottom*/;
+        transform: rotate3d(0,1,0,90deg);
+    }
+
+    #shape-3 {
+        fill: $shape3;
+
+        transform-origin: center/* top*/;
+        transform: rotate3d(1.732,1,0,90deg);
+    }
+
+    #shape-4 {
+        fill: $shape4;
+
+        transform-origin: center/* top*/;
+        transform: rotate3d(-1.732 , 1 , 0 , 90deg);
+    }
+
+    #shape-5 {
+        fill: $shape5;
+
+        transform-origin: center /*top*/;
+        transform: rotate3d(0,1,0,90deg);
+    }
+
+    #shape-6 {
+        fill: $shape6;
+
+        transform-origin: center/* center*/;
+        opacity: 0;
+    }
 }

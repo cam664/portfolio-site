@@ -453,7 +453,7 @@ main {
     min-width: 230px;
     float: right;
     border: 3px solid #fff;
-    border-bottom: 1.5px solid #fff;
+    border-bottom: 1px solid #fff;
     box-shadow: 0 0 1px transparentize($black-light, 0.2);
 
     @include for-tablet-landscape-down {
