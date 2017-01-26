@@ -40,7 +40,11 @@ $z-layers: (
     @media (max-width: 1200px) { @content; }
 }
 
-@mixin for-big-desktop-up {
+@mixin for-small-laptop-down {
+    @media (max-width: 1400px) { @content; }
+}
+
+    @mixin for-big-desktop-up {
     @media (min-width: 1650px) { @content; }
 }
 

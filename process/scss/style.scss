@@ -2,32 +2,22 @@
     font-family: 'heading italic';
     src: url('fonts/SFProverbialGothicExtended-.ttf');
 }
-
 @font-face {
     font-family: 'heading';
     src: url('fonts/SFProverbialGothicExtended.ttf');
 }
-
 @import 'reset.scss';
 @import 'mixins.scss';
 @import 'logo-anim.scss';
-
-
-
 $bright-blue: lighten(#3D7EAA,10);
-
 $blue-lightest: lighten(#2c3e50,36);
 $blue-light: lighten(#2c3e50,22);
 $blue-dark: #2c3e50;
-
 $purple: #9c719b;
-
 $yellow: #DBAD6A;
-
 $black-lightest: #4a4a4a;
 $black-light: #3a3a3a;
 $black-dark: #3d3d3d;
-
 @keyframes heading {
     from {
         opacity: 0;
@@ -36,17 +26,13 @@ $black-dark: #3d3d3d;
         opacity: 0.95;
     }
 }
-
-
 a {
     display: inline-block;
 }
-
 body {
     font-size: 62.5%;
     width: 100%;
 }
-
 nav {
     height: 70px;
     position: fixed;
@@ -56,17 +42,14 @@ nav {
     left: 0;
     transform: translate(0, -147px);
     transition: 0.2s all ease-out;
-    
     @include for-phone-only {
         height: 50px;
     }
 }
-
 .no-scroll {
     position: fixed;
     overflow-y: scroll;
 }
-
 .loading-screen {
     position: fixed;
     top: 0;
@@ -84,7 +67,6 @@ nav {
         top: -50px;
     }
 }
-
 .navbar {
     width: 100%;
     height: 100%;
@@ -94,40 +76,36 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
     @include for-tablet-landscape-down {
-        padding: 0 13% 0;    
+        padding: 0 13% 0;
     }
     img {
         height: 125px;
         margin-top: 18px;
         padding: 0;
-        
         @include for-phone-only {
             height: 90px;
         }
     }
     a {
         position: relative;
+        color: inherit;
     }
     & > a {
         padding: 0 10% 0;
-        
         @include for-tablet-landscape-down {
-            padding: 9%;    
+            padding: 9%;
         }
-        
         @include for-tablet-portrait-down {
             padding: 5%;
         }
-        
         @include for-phone-only {
             padding: 0;
         }
     }
 }
-
-.nav-effect:before, .nav-effect:after{
+.nav-effect:before,
+.nav-effect:after {
     position: absolute;
     opacity: 0;
     width: 0%;
@@ -136,23 +114,22 @@ nav {
     background: $blue-light;
     transition: all 0.3s;
 }
-
 .nav-effect:before {
     left: 0px;
     top: -2px;
 }
-
 .nav-effect:after {
     right: 0px;
     bottom: -2px;
 }
-
-.nav-effect:hover:before, .nav-effect:hover:after {
+.nav-effect:hover:before,
+.nav-effect:hover:after {
     opacity: 1;
     width: 100%;
 }
 
-.nav-active:before, .nav-active:after {
+.nav-active:before,
+.nav-active:after {
     position: absolute;
     opacity: 1;
     width: 100%;
@@ -160,18 +137,15 @@ nav {
     content: '';
     background: $blue-light;
     transition: all 0.3s;
-}
-
+    }
 .nav-active:before {
     left: 0px;
-    top: -2px;  
+    top: -2px;
 }
-
 .nav-active:after {
     right: 0px;
     bottom: -2px;
 }
-    
 ul {
     text-decoration: none;
     display: inline-flex;
@@ -179,24 +153,19 @@ ul {
     align-items: center;
     justify-content: space-between;
 }
-
 ul li {
     font-family: 'Montserrat';
     font-size: 1.2rem;
     color: $black-light;
     display: inline-block;
-    
     @include for-tablet-portrait-down {
         padding: 5%;
     }
-    
     @include for-phone-only {
         font-size: 1rem;
         padding: 0 9.5% 0;
     }
-
 }
-
 header {
     overflow: hidden;
     position: relative;
@@ -204,20 +173,18 @@ header {
     background: url(../img/yellow-bg.jpg);
     cursor: default;
     background-size: cover;
+    background-position: center;
 }
-
 .logo-svg {
     transform-origin: center center;
     filter: drop-shadow(0px 1px 2px $yellow)
 }
-
 .tilt-container {
     transform-style: preserve-3d;
     perspective: 500px;
     transition: all 0.35s ease-out;
-    margin: 30px auto;
+    margin: 0 auto;
 }
-
 #logo-wrapper {
     position: relative;
     overflow: hidden;
@@ -225,11 +192,9 @@ header {
     margin: 0 auto;
     transform-origin: center center;
     transition: all 2s ease-out;
-    
     @include for-tablet-landscape-down {
         width: 100%;
     }
-    
     @include for-phone-only {
         width: 135%;
         position: relative;
@@ -237,19 +202,16 @@ header {
         left: 50%;
     }
 }
-
 .heading-wrapper {
     z-index: z(heading-wrapper);
     display: block;
     width: 70%;
     text-align: center;
     margin: 0 auto;
-    
     @include for-tablet-landscape-down {
         width: 85%;
     }
 }
-
 .heading-primary {
     margin: -80px auto;
     font-family: 'heading italic', sans-serif;
@@ -258,111 +220,94 @@ header {
     letter-spacing: 5px;
     color: $blue-light;
     text-shadow: -0.5px -0.5px 3px $yellow;
-    
-    @include for-tablet-landscape-down {
+    @include for-small-laptop-down {
         font-size: 7rem;
         margin: -75px auto;
     }
-    
     @include for-tablet-portrait-down {
         font-size: 7.5rem;
         margin: -20px auto;
     }
-    
     @include for-phone-only {
         font-size: 4rem;
         margin: -15px auto;
     }
-    
     @media (min-width: 1750px) {
         font-size: 10rem;
     }
 }
-
 .heading-sub {
     font-weight: 700;
     font-family: 'heading', sans-serif;
     font-size: 5rem;
     letter-spacing: 3px;
     color: $blue-lightest;
-    text-shadow: -0.5px -0.5px 3px $yellow/*mix(white,#c69c39,40)*/;
+    text-shadow: -0.5px -0.5px 3px $yellow;
     margin: 120px auto 40px;
-    
-    @include for-tablet-landscape-down {
+    @include for-small-laptop-down {
         font-size: 3.5rem;
         margin: 90px auto 30px;
     }
-    
     @include for-tablet-portrait-down {
         font-size: 4rem;
         margin: 80px auto 55px;
     }
-    
     @include for-phone-only {
         font-size: 2.4rem;
         margin: 40px auto 35px;
     }
-    
     @media (min-width: 1750px) {
         font-size: 6.5rem;
     }
 }
-
 .depth-1 {
     transform: translateZ(30px)
 }
-
 .horizontal-center {
     position: relative;
     transform: translate(-50%, 0);
     left: 50%;
 }
-
 .project-btn {
-	background-color: $blue-light;
-	border-radius:28px;
+    background-color: $blue-light;
+    border-radius: 28px;
     transform-origin: center center;
-	border: 2px solid $blue-lightest;
-	display: inline-block;
-	cursor: pointer;
+    border: 2px solid $blue-lightest;
+    display: inline-block;
+    cursor: pointer;
     transition: all 0.2s ease-in-out;
-	color: #fff;
-	font-family: 'heading';
-	font-size:1.5rem;
-	padding:10px 35px 10px 40px;
-	text-decoration: none;
+    color: #fff;
+    font-family: 'heading';
+    font-size: 1.5rem;
+    padding: 10px 35px 10px 40px;
+    text-decoration: none;
     letter-spacing: 2px;
     text-shadow: -0.2px -0.2px 1px $yellow;
     box-shadow: -0.3px -0.3px 2px $yellow;
     margin: 0 auto;
-    
     @include for-phone-only {
-        font-size:1.1rem;
-	   padding:7px 30px 7px 35px;
+        font-size: 1.1rem;
+        padding: 7px 30px 7px 35px;
     }
     &:hover {
-        border:2px solid $blue-light;
+        border: 2px solid $blue-light;
         background-color: $blue-lightest;
     }
 }
-
 main {
     padding: 80px 8% 30px 8%;
     transition: all 0.25s ease-in;
     height: 100%;
-    
     @include for-phone-only {
         padding: 80px 5% 30px 5%;
     }
 }
-
 .block-link {
     display: block;
     position: absolute;
     height: 100%;
     width: 100%;
 }
-
 .project-item {
     @include clearfix();
     padding: 20px;
@@ -380,7 +325,6 @@ main {
         display: inline-block;
         line-height: 1.2;
         min-width: 310px;
-        
         @include for-phone-only {
             min-width: 0;
         }
@@ -392,43 +336,27 @@ main {
         width: 60%;
         padding-top: 35px;
         line-height: 1.5;
-        
         @include for-phone-only {
             width: 100%;
             padding-top: 10px;
         }
     }
     &:hover {
-        transform: translateY(-3px); 
-        box-shadow:  
-                0 1px 0 hsl(42,5%,80%),
-                0 2px 0 hsl(42,5%,75%),
-                0 3px 0 hsl(42,5%,70%),
-                0 4px 0 hsl(42,5%,66%),
-                0 5px 0 hsl(42,5%,64%),
-
-                0 -5px 5px rgba(0,0,0,.1),
-                0 1px 3px rgba(0,0,0,.2),
-                0 3px 5px rgba(0,0,0,.2),
-                0 5px 10px rgba(0,0,0,.2),
-                0 8px 10px rgba(0,0,0,.2),
-                0 16px 20px rgba(0,0,0,.22);
-        }
+        transform: translateY(-3px);
+        box-shadow: 0 1px 0 hsl(42, 5%, 80%), 0 2px 0 hsl(42, 5%, 75%), 0 3px 0 hsl(42, 5%, 70%), 0 4px 0 hsl(42, 5%, 66%), 0 5px 0 hsl(42, 5%, 64%), 0 -5px 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .2), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .2), 0 8px 10px rgba(0, 0, 0, .2), 0 16px 20px rgba(0, 0, 0, .22);
+    }
 }
-
 .project-top-row {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
     width: 70%;
-    
     @include for-tablet-landscape-down {
         width: 100%;
         flex-direction: column;
         align-items: flex-start;
     }
 }
-
 .tags {
     display: inline-flex;
     flex-wrap: wrap;
@@ -443,11 +371,10 @@ main {
         margin-top: 7px;
         text-align: center;
         &:last-of-type {
-            margin-right: 20px; 
+            margin-right: 20px;
         }
     }
 }
-
 .project-thumb {
     width: 30%;
     min-width: 230px;
@@ -455,28 +382,23 @@ main {
     border: 3px solid #fff;
     border-bottom: 1px solid #fff;
     box-shadow: 0 0 1px transparentize($black-light, 0.2);
-
     @include for-tablet-landscape-down {
         min-width: 280px;
     }
-      
     @include for-tablet-portrait-down {
         margin-top: 30px;
     }
-    
     @include for-phone-only {
         min-width: 0;
         float: none;
         width: 100%;
         margin: 15px auto;
     }
-    
     img {
         height: 100%;
         width: 100%;
     }
 }
-
 .icon-link {
     position: relative;
     z-index: z(icon-link);
@@ -490,36 +412,28 @@ main {
     text-align: center;
     font-size: 1rem;
     font-family: 'Lato', sans-serif;
-    color: rgba(58,58,58,0.8);
+    color: rgba(58, 58, 58, 0.8);
     &:hover {
-        color: rgba(58,58,58,1);    
+        color: rgba(58, 58, 58, 1);
     }
     i {
         font-size: 1.5rem;
         margin-right: 10px;
-    }  
+    }
 }
-
 #about {
     padding: 90px 0;
 }
-
 .bio {
     height: auto;
     background: url(../img/about-bg.svg) center no-repeat;
     background-size: cover;
     margin: -100px auto;
     font-family: 'Lato', sans-serif;
-    /*background-color: $blue-dark;*/
-    /*clip-path: polygon(50% 0, 100% 10%, 100% 90%, 50% 100%, 0% 90%, 0% 10%);
-    clip-path: polygon(50% 0, 100% 15%, 100% 100%, 0% 100%, 0% 15%);
-    clip-path: url("#pointy-clip-path");*/
     padding: 135px 24% 100px 24%;
-    
     @include for-tablet-landscape-down {
         padding: 135px 13% 100px 13%;
     }
-    
     p {
         font-size: 1.4rem;
         color: #fff;
@@ -538,7 +452,6 @@ main {
         background-size: 100% 100%;
     }
 }
-
 .headshot {
     position: relative;
     z-index: z(headshot);
@@ -546,36 +459,30 @@ main {
     height: 250px;
     border-radius: 20px;
     margin: 0 auto;
-    /*transform: rotate(134.5deg);*/
     background-color: #fff;
     border: 15px solid $bright-blue;
-    /*box-shadow: 0 0 4px 1px $landing-grad-blue;*/
     overflow: hidden;
-    
     @include for-tablet-portrait-down {
         width: 220px;
         height: 220px;
     }
-    
     img {
         width: 100%;
         height: 100%;
     }
 }
-
 .page-wrapper {
     background: #fff;
     position: relative;
     z-index: z(page-wrapper);
 }
-
 #skills {
     margin: 0 auto;
     padding: 260px 8% 60px 8%;
-    box-shadow: 0 1px 1px rgba(255,255,255,1);
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 1);
     max-width: 1850px;
     @include for-phone-only {
-        padding: 300px 8% 420px 8%;
+        padding: 300px 8% 70px 8%;
     }
     h3 {
         font-family: 'Montserrat';
@@ -592,7 +499,6 @@ main {
         }
     }
 }
-
 .skills-wrapper {
     perspective: 500px;
     transform-style: preserve-3d;
@@ -601,66 +507,54 @@ main {
         margin-top: -150px;
     }
 }
-
 @for $i from 0 through 5 {
     .#{shelf}-#{$i} {
         height: 90px;
         background: $purple;
         transform: rotateX(65deg) translateZ(-#{$i}px);
-        
         @include for-phone-only {
             background: transparent;
-        }    
         }
+    }
 }
-
 @for $i from 1 through 5 {
     .#{shelf}-#{$i} {
         background: darken($purple, 13% - ($i * 2.5));
-        
         @include for-phone-only {
             background: transparent;
         }
-        }
+    }
 }
-
 @for $i from 0 through 5 {
     .#{stack}-#{$i} {
         position: relative;
         top: -($i * 90px);
-        }
+    }
 }
-
 .shelf-0 {
     padding: 0 80px;
     transform-style: preserve-3d;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
     @include for-tablet-landscape-down {
         padding: 0 50px;
     }
-    
     @include for-tablet-portrait-down {
         padding: 0 30px;
     }
-    
     @include for-phone-only {
         padding: 0;
         flex-wrap: wrap;
         transform: rotateX(0);
     }
 }
-
 .shelf-5 {
-    box-shadow:  0 -3px 31px 15px transparentize(hsl(301,18%,53%),0.16);
-        
+    box-shadow: 0 -3px 31px 15px transparentize(hsl(301, 18%, 53%), 0.16);
     @include for-phone-only {
         box-shadow: 0 0 0 #fff;
-    }    
+    }
 }
-
 .skills-icon {
     width: 112px;
     display: inline-block;
@@ -668,32 +562,30 @@ main {
     transform: rotateX(-65deg);
     position: relative;
     bottom: 28px;
-    filter: drop-shadow(0 3.5px 3px rgba(0,0,0,0.29));
+    filter: drop-shadow(0 3.5px 3px rgba(0, 0, 0, 0.29));
     transition: 0.2s all ease-in-out;
-    
     @include for-tablet-landscape-down {
         width: 87px;
         bottom: 18px;
     }
-    
     @include for-tablet-portrait-down {
         width: 72px;
         bottom: 18px;
     }
-    
     @include for-phone-only {
         transform: rotateX(0deg);
+        &:hover {
+            transform: rotateX(0) translate(0);
+            filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+        }
     }
-    
     &.shrink {
         width: 93px;
         padding-bottom: 4px;
-        
         @include for-tablet-landscape-down {
             width: 78px;
             padding-bottom: 0;
         }
-        
         @include for-tablet-portrait-down {
             width: 63px;
             padding-bottom: 0;
@@ -701,29 +593,24 @@ main {
     }
     &:hover {
         transform: rotateX(-65deg) translate(0, -7px);
-        filter: drop-shadow(0 7.5px 3px rgba(0,0,0,0.18));
+        filter: drop-shadow(0 7.5px 3px rgba(0, 0, 0, 0.18));
     }
 }
-
 #school {
     @include clearfix();
     padding: 50px 8% 70px 8%;
     background: #ddd;
 }
-
 .school-wrapper {
     width: 50%;
     float: right;
-    
     @include for-tablet-landscape-down {
         width: 65%;
         margin: -40px auto;
     }
-    
     @include for-tablet-portrait-down {
         width: 100%;
     }
-    
     @include for-phone-only {
         margin-top: -130px;
         margin: -20px auto;
@@ -759,13 +646,11 @@ main {
         }
     }
 }
-
 #contact-spacer {
-    margin-top: -10px;
+    margin-top: -5px;
     height: 100vh;
     background: transparent;
 }
-
 #contact {
     position: fixed;
     z-index: z(contact);
@@ -781,7 +666,6 @@ main {
     align-items: center;
     justify-content: center;
 }
-
 .contact-info {
     background: url(../img/contact-corners-top.svg), url(../img/contact-corners-bottom.svg);
     padding: 20px;
@@ -793,19 +677,15 @@ main {
     background-size: 5% auto;
     background-position: left top, right bottom;
     background-repeat: no-repeat;
-    
     @include for-tablet-landscape-down {
         width: 75.5%;
     }
-    
     @include for-tablet-portrait-down {
         width: 73%;
     }
-    
     @include for-phone-only {
         width: 100%;
     }
-    
     h3 {
         font-size: 3.5rem;
         font-family: 'Lato', sans-serif;
@@ -843,6 +723,6 @@ main {
         display: inline-block;
         &:hover {
             transform: translateY(-3px) scale(1.05);
-        }    
+        }
     }
 }

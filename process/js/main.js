@@ -1,16 +1,16 @@
 //after page load: play logo animation and hide loading screen 
-$(document).ready(function () {
+$(window).on('load', function () { 
 
     $('.loading-screen').fadeOut('400');
-    
+
     $('#shape-1').addClass('anim-shape-1');
     $('#shape-2').addClass('anim-shape-2');
     $('#shape-3').addClass('anim-shape-3');
     $('#shape-4').addClass('anim-shape-4');
     $('#shape-5').addClass('anim-shape-5');
     $('#shape-6').addClass('anim-shape-6');
-    
-    $('body').removeClass('no-scroll');
+
+    $('body').removeClass('no-scroll');   
 
 });
 
@@ -40,8 +40,10 @@ function logoTilt() {
             rotate_X = (e.pageX - objCenterX) / 90;
             rotate_Y = (-e.pageY - objCenterY) / 90;
         }
-
-        $tiltCont.css('transform', 'rotateX(' + rotate_Y + 'deg) rotateY(' + rotate_X + 'deg)');
+        
+        window.requestAnimationFrame(function () {
+            $tiltCont.css('transform', 'rotateX(' + rotate_Y + 'deg) rotateY(' + rotate_X + 'deg)');
+        });    
     });
 }
 
@@ -61,7 +63,7 @@ $(document).on('scroll', function () {
     var $navContact = $('.nav-contact');
     var $elContact = $('#contact-spacer');
     var $elSchool = $('#school');
-    
+
     //navbar show/hide toggle
     if (distance >= 50) {
         $nav.css('transform', 'translate(0, 0)');
@@ -75,21 +77,21 @@ $(document).on('scroll', function () {
     } else {
         $navProjects.removeClass('nav-active');
     }
-    
+
     if (distance + offset > $elAbout.offset().top && distance + offset < $elAbout.offset().top + $elAbout.outerHeight(true)) {
         $navAbout.addClass('nav-active');
     } else {
         $navAbout.removeClass('nav-active');
     }
-    
+
     if (distance + offset > $elSkills.offset().top && distance + offset < $elSkills.offset().top + ($elSkills.outerHeight(true) + $elSchool.outerHeight(true))) {
         $navSkills.addClass('nav-active');
     } else {
         $navSkills.removeClass('nav-active');
     }
-    
-    if (distance + offset > $elContact.offset().top /*&& distance + offset < $elContact.offset().top + $elContact.height()*/) {
-        $navContact.addClass('nav-active')        
+
+    if (distance + offset > $elContact.offset().top) {
+        $navContact.addClass('nav-active')
     } else {
         $navContact.removeClass('nav-active');
     }
@@ -97,11 +99,11 @@ $(document).on('scroll', function () {
 });
 
 //smooth scroll to anchor elements
-$('a[href^="#"]').on('click', function(event) {
+$('a[href^="#"]').on('click', function (event) {
     var target = $(this.getAttribute('href'));
     var offSet = 50;
 
-    if( target.length ) {
+    if (target.length) {
 
         event.preventDefault();
 
