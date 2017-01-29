@@ -42,8 +42,43 @@ nav {
     left: 0;
     transform: translate(0, -147px);
     transition: 0.2s all ease-out;
-    @include for-phone-only {
+    background: #fff;
+    padding: 0 23% 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include for-tablet-landscape-down {
+        padding: 0 13% 0;
+    }
+    @include for-phone-down {
         height: 50px;
+    }
+    img {
+        height: 125px;
+        margin-top: 18px;
+        padding: 0;
+        @include for-phone-down {
+            height: 90px;
+        }
+        @include for-small-phone-only {
+            height: 75px;    
+        }
+    }
+    a {
+        position: relative;
+        color: $black-light;
+    }
+    & > a {
+        padding: 0 10% 0;
+        @include for-tablet-landscape-down {
+            padding: 9%;
+        }
+        @include for-tablet-portrait-down {
+            padding: 5%;
+        }
+        @include for-phone-down {
+            padding: 0;  
+        }
     }
 }
 .no-scroll {
@@ -65,43 +100,6 @@ nav {
     svg {
         position: relative;
         top: -50px;
-    }
-}
-.navbar {
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    top: 0;
-    padding: 0 23% 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    @include for-tablet-landscape-down {
-        padding: 0 13% 0;
-    }
-    img {
-        height: 125px;
-        margin-top: 18px;
-        padding: 0;
-        @include for-phone-only {
-            height: 90px;
-        }
-    }
-    a {
-        position: relative;
-        color: inherit;
-    }
-    & > a {
-        padding: 0 10% 0;
-        @include for-tablet-landscape-down {
-            padding: 9%;
-        }
-        @include for-tablet-portrait-down {
-            padding: 5%;
-        }
-        @include for-phone-only {
-            padding: 0;
-        }
     }
 }
 .nav-effect:before,
@@ -146,24 +144,27 @@ nav {
     right: 0px;
     bottom: -2px;
 }
-ul {
+.main-nav {
     text-decoration: none;
     display: inline-flex;
     width: 100%;
     align-items: center;
     justify-content: space-between;
-}
-ul li {
-    font-family: 'Montserrat';
-    font-size: 1.2rem;
-    color: $black-light;
-    display: inline-block;
-    @include for-tablet-portrait-down {
-        padding: 5%;
-    }
-    @include for-phone-only {
-        font-size: 1rem;
-        padding: 0 9.5% 0;
+    li {
+        font-family: 'Montserrat';
+        font-size: 1.2rem;
+        color: $black-light;
+        display: inline-block;
+        @include for-tablet-portrait-down {
+            padding: 5%;
+        }
+        @include for-phone-down {
+            font-size: 1rem;
+            padding: 0 4% 0;
+        }
+        @include for-small-phone-only {
+            padding: 0 3px 0;
+        }
     }
 }
 header {
@@ -185,7 +186,7 @@ header {
     transition: all 0.35s ease-out;
     margin: 0 auto;
 }
-#logo-wrapper {
+.logo-wrapper {
     position: relative;
     overflow: hidden;
     width: 70%;
@@ -195,7 +196,7 @@ header {
     @include for-tablet-landscape-down {
         width: 100%;
     }
-    @include for-phone-only {
+    @include for-phone-down {
         width: 135%;
         position: relative;
         transform: translate(-50%, 0);
@@ -228,7 +229,7 @@ header {
         font-size: 7.5rem;
         margin: -20px auto;
     }
-    @include for-phone-only {
+    @include for-phone-down {
         font-size: 4rem;
         margin: -15px auto;
     }
@@ -252,7 +253,7 @@ header {
         font-size: 4rem;
         margin: 80px auto 55px;
     }
-    @include for-phone-only {
+    @include for-phone-down {
         font-size: 2.4rem;
         margin: 40px auto 35px;
     }
@@ -285,7 +286,7 @@ header {
     text-shadow: -0.2px -0.2px 1px $yellow;
     box-shadow: -0.3px -0.3px 2px $yellow;
     margin: 0 auto;
-    @include for-phone-only {
+    @include for-phone-down {
         font-size: 1.1rem;
         padding: 7px 30px 7px 35px;
     }
@@ -298,7 +299,7 @@ main {
     padding: 80px 8% 30px 8%;
     transition: all 0.25s ease-in;
     height: 100%;
-    @include for-phone-only {
+    @include for-phone-down {
         padding: 80px 5% 30px 5%;
     }
 }
@@ -317,18 +318,6 @@ main {
     cursor: pointer;
     transition: all 0.2s ease-in;
     max-width: 1750px;
-    h2 {
-        font-size: 2rem;
-        font-weight: 300;
-        font-family: 'Montserrat';
-        color: $black-lightest;
-        display: inline-block;
-        line-height: 1.2;
-        min-width: 310px;
-        @include for-phone-only {
-            min-width: 0;
-        }
-    }
     p {
         font-size: 1.1rem;
         font-family: 'Lato', sans-serif;
@@ -336,7 +325,7 @@ main {
         width: 60%;
         padding-top: 35px;
         line-height: 1.5;
-        @include for-phone-only {
+        @include for-phone-down {
             width: 100%;
             padding-top: 10px;
         }
@@ -355,12 +344,24 @@ main {
         width: 100%;
         flex-direction: column;
         align-items: flex-start;
+    }    
+    h2 {
+        font-size: 2rem;
+        font-weight: 300;
+        font-family: 'Montserrat';
+        color: $black-lightest;
+        display: inline-block;
+        line-height: 1.2;
+        min-width: 310px;
+        @include for-phone-down {
+            min-width: 0;
+        }
     }
 }
 .tags {
     display: inline-flex;
     flex-wrap: wrap;
-    div {
+    li {
         font-size: 0.9rem;
         font-family: 'Lato', sans-serif;
         color: #fff;
@@ -380,7 +381,6 @@ main {
     min-width: 230px;
     float: right;
     border: 3px solid #fff;
-    border-bottom: 1px solid #fff;
     box-shadow: 0 0 1px transparentize($black-light, 0.2);
     @include for-tablet-landscape-down {
         min-width: 280px;
@@ -388,15 +388,11 @@ main {
     @include for-tablet-portrait-down {
         margin-top: 30px;
     }
-    @include for-phone-only {
+    @include for-phone-down {
         min-width: 0;
         float: none;
         width: 100%;
         margin: 15px auto;
-    }
-    img {
-        height: 100%;
-        width: 100%;
     }
 }
 .icon-link {
@@ -481,7 +477,7 @@ main {
     padding: 260px 8% 60px 8%;
     box-shadow: 0 1px 1px rgba(255, 255, 255, 1);
     max-width: 1850px;
-    @include for-phone-only {
+    @include for-phone-down {
         padding: 300px 8% 70px 8%;
     }
     h3 {
@@ -493,7 +489,7 @@ main {
         top: -115px;
         color: $black-lightest;
         display: inline-block;
-        @include for-phone-only {
+        @include for-phone-down {
             font-size: 1.5rem;
             top: -200px
         }
@@ -503,7 +499,7 @@ main {
     perspective: 500px;
     transform-style: preserve-3d;
     height: 150px;
-    @include for-phone-only {
+    @include for-phone-down {
         margin-top: -150px;
     }
 }
@@ -512,7 +508,7 @@ main {
         height: 90px;
         background: $purple;
         transform: rotateX(65deg) translateZ(-#{$i}px);
-        @include for-phone-only {
+        @include for-phone-down {
             background: transparent;
         }
     }
@@ -520,7 +516,7 @@ main {
 @for $i from 1 through 5 {
     .#{shelf}-#{$i} {
         background: darken($purple, 13% - ($i * 2.5));
-        @include for-phone-only {
+        @include for-phone-down {
             background: transparent;
         }
     }
@@ -543,7 +539,7 @@ main {
     @include for-tablet-portrait-down {
         padding: 0 30px;
     }
-    @include for-phone-only {
+    @include for-phone-down {
         padding: 0;
         flex-wrap: wrap;
         transform: rotateX(0);
@@ -551,7 +547,7 @@ main {
 }
 .shelf-5 {
     box-shadow: 0 -3px 31px 15px transparentize(hsl(301, 18%, 53%), 0.16);
-    @include for-phone-only {
+    @include for-phone-down {
         box-shadow: 0 0 0 #fff;
     }
 }
@@ -572,7 +568,7 @@ main {
         width: 72px;
         bottom: 18px;
     }
-    @include for-phone-only {
+    @include for-phone-down {
         transform: rotateX(0deg);
         &:hover {
             transform: rotateX(0) translate(0);
@@ -611,7 +607,7 @@ main {
     @include for-tablet-portrait-down {
         width: 100%;
     }
-    @include for-phone-only {
+    @include for-phone-down {
         margin-top: -130px;
         margin: -20px auto;
     }
@@ -621,7 +617,7 @@ main {
         font-family: 'Montserrat';
         color: $black-lightest;
         padding-bottom: 2px;
-        @include for-phone-only {
+        @include for-phone-down {
             font-size: 1.4rem;
         }
     }
@@ -631,7 +627,7 @@ main {
         font-family: 'Lato', sans-serif;
         font-weight: 400;
         letter-spacing: 0.2px;
-        @include for-phone-only {
+        @include for-phone-down {
             font-size: 1rem;
         }
     }
@@ -641,7 +637,7 @@ main {
         font-family: 'Lato', sans-serif;
         color: $black-dark;
         font-weight: 300;
-        @include for-phone-only {
+        @include for-phone-down {
             font-size: 1rem;
         }
     }
@@ -683,7 +679,7 @@ main {
     @include for-tablet-portrait-down {
         width: 73%;
     }
-    @include for-phone-only {
+    @include for-phone-down {
         width: 100%;
     }
     h3 {
@@ -693,7 +689,7 @@ main {
         font-weight: 700;
         color: #fff;
         padding-bottom: 33px;
-        @include for-phone-only {
+        @include for-phone-down {
             font-size: 3rem;
         }
     }
@@ -701,7 +697,7 @@ main {
         color: #fff;
         font-size: 2.8rem;
         padding: 0 20px 0 10px;
-        @include for-phone-only {
+        @include for-phone-down {
             font-size: 2.4rem;
             padding: 0 20px 5px 10px;
         }
@@ -714,7 +710,7 @@ main {
         letter-spacing: 1px;
         display: inline-block;
         padding-bottom: 20px;
-        @include for-phone-only {
+        @include for-phone-down {
             font-size: 2rem;
         }
     }

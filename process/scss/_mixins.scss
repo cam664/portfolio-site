@@ -28,7 +28,11 @@ $z-layers: (
   @return null;
 }
 
-@mixin for-phone-only {
+@mixin for-small-phone-only {
+    @media (max-width: 330px) { @content; }
+}
+
+@mixin for-phone-down {
     @media (max-width: 599px) { @content; }
 }
 
@@ -44,7 +48,7 @@ $z-layers: (
     @media (max-width: 1400px) { @content; }
 }
 
-    @mixin for-big-desktop-up {
+@mixin for-big-desktop-up {
     @media (min-width: 1650px) { @content; }
 }
 

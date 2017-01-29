@@ -1,5 +1,6 @@
+'use strict';
 //after page load: play logo animation and hide loading screen 
-$(window).on('load', function () { 
+$(window).on('load', function () {
 
     $('.loading-screen').fadeOut('400');
 
@@ -10,15 +11,11 @@ $(window).on('load', function () {
     $('#shape-5').addClass('anim-shape-5');
     $('#shape-6').addClass('anim-shape-6');
 
-    $('body').removeClass('no-scroll');   
+    $('body').removeClass('no-scroll');
 
 });
 
-//logo tilt effect initalized after the animation is complete
-setTimeout(function () {
-    logoTilt();
-}, 2000);
-
+//logo tilt effect, initalized below after the animation is complete
 function logoTilt() {
     $(document).mousemove(function (e) {
         var $tiltCont = $('.tilt-container'),
@@ -41,28 +38,31 @@ function logoTilt() {
             rotate_Y = (-e.pageY - objCenterY) / 90;
         }
         
-        window.requestAnimationFrame(function () {
-            $tiltCont.css('transform', 'rotateX(' + rotate_Y + 'deg) rotateY(' + rotate_X + 'deg)');
-        });    
+        $tiltCont.css('transform', 'rotateX(' + rotate_Y + 'deg) rotateY(' + rotate_X + 'deg)');
+
     });
 }
 
+setTimeout(function () {
+    logoTilt();
+}, 2000);
+
 //navbar show/hide toggle and nav current section indicator
 $(document).on('scroll', function () {
-    var distance = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    var height = $('body').outerHeight(true);
-    var tabletPortrait = 4730;
-    var $nav = $('nav');
-    var offset = 350;
-    var $navProjects = $('.nav-projects');
-    var $elProjects = $('#projects');
-    var $navAbout = $('.nav-about');
-    var $elAbout = $('#about');
-    var $navSkills = $('.nav-skills');
-    var $elSkills = $('#skills');
-    var $navContact = $('.nav-contact');
-    var $elContact = $('#contact-spacer');
-    var $elSchool = $('#school');
+    var distance = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0,
+        height = $('body').outerHeight(true),
+        tabletPortrait = 4730,
+        $nav = $('nav'),
+        offset = 350,
+        $navProjects = $('.nav-projects'),
+        $elProjects = $('#projects'),
+        $navAbout = $('.nav-about'),
+        $elAbout = $('#about'),
+        $navSkills = $('.nav-skills'),
+        $elSkills = $('#skills'),
+        $navContact = $('.nav-contact'),
+        $elContact = $('#contact-spacer'),
+        $elSchool = $('#school');
 
     //navbar show/hide toggle
     if (distance >= 50) {
@@ -91,7 +91,7 @@ $(document).on('scroll', function () {
     }
 
     if (distance + offset > $elContact.offset().top) {
-        $navContact.addClass('nav-active')
+        $navContact.addClass('nav-active');
     } else {
         $navContact.removeClass('nav-active');
     }
@@ -100,8 +100,8 @@ $(document).on('scroll', function () {
 
 //smooth scroll to anchor elements
 $('a[href^="#"]').on('click', function (event) {
-    var target = $(this.getAttribute('href'));
-    var offSet = 50;
+    var target = $(this.getAttribute('href')),
+        offSet = 50;
 
     if (target.length) {
 
@@ -111,7 +111,7 @@ $('a[href^="#"]').on('click', function (event) {
             offSet = 140;
         }
         if (target.is('#contact')) {
-            offSet = -5400;
+            offSet = -6500;
         }
 
         $('html, body').stop().animate({

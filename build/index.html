@@ -40,7 +40,8 @@
                 </animate>
             </rect>
             <rect x="40" y="15" width="20" height="20" fill="#547698" class="sq">
-                <animate attributeName="fill" from="#547698" to="#7c9ab7" repeatCount="indefinite" dur="1s" begin="0.125s" values="#7c9ab7;#7c9ab7;#547698;#547698" keyTimes="0;0.1;0.2;1"></animate>
+                <animate attributeName="fill" from="#547698" to="#7c9ab7" repeatCount="indefinite" dur="1s" begin="0.125s" values="#7c9ab7;#7c9ab7;#547698;#547698" keyTimes="0;0.1;0.2;1">
+                </animate>
             </rect>
             <rect x="65" y="15" width="20" height="20" fill="#547698" class="sq">
                 <animate attributeName="fill" from="#547698" to="#7c9ab7" repeatCount="indefinite" dur="1s" begin="0.25s" values="#7c9ab7;#7c9ab7;#547698;#547698" keyTimes="0;0.1;0.2;1">
@@ -71,29 +72,25 @@
 
     <nav>
 
-        <div class="navbar">
+        <ul class="main-nav">
+            <li>
+                <a class="nav-effect nav-projects" href="#projects">Projects</a>
+            </li>
+            <li>
+                <a class="nav-effect nav-about" href="#about">About</a>
+            </li>
+        </ul>
 
-            <ul>
-                <li>
-                    <a class="nav-effect nav-projects" href="#projects">Projects</a>
-                </li>
-                <li>
-                    <a class="nav-effect nav-about" href="#about">About</a>
-                </li>
-            </ul>
+        <a href="#home"><img src='img/nav-logo.svg' alt="Logo"></a>
 
-            <a href="#home"><img src='img/nav-logo.svg' alt="Logo"></a>
-
-            <ul>
-                <li>
-                    <a class="nav-effect nav-skills" href="#skills">Skills</a>
-                </li>
-                <li>
-                    <a class="nav-effect nav-contact" href="#contact">Contact</a>
-                </li>
-            </ul>
-
-        </div>
+        <ul class="main-nav">
+            <li>
+                <a class="nav-effect nav-skills" href="#skills">Skills</a>
+            </li>
+            <li>
+                <a class="nav-effect nav-contact" href="#contact">Contact</a>
+            </li>
+        </ul>
 
     </nav>
 
@@ -101,7 +98,7 @@
         <header id="home">
 
             <div class="tilt-container">
-                <div id="logo-wrapper">
+                <div class="logo-wrapper">
                     <svg class="logo-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1100 500" preserveAspectRatio="xMaxYMax meet">
 
                         <g id="shape-1">
@@ -206,18 +203,16 @@
                 <div class="project-top-row">
                     <h2>Self Sorting Image Gallery</h2>
 
-                    <div class="tags">
-                        <div>HTML5/CSS3</div>
-                        <div>SCSS/SASS</div>
-                        <div>Gulp</div>
-                        <div>JQuery</div>
-                        <div>AJAX</div>
-                    </div>
+                    <ul class="tags">
+                        <li>HTML5/CSS3</li>
+                        <li>SCSS/SASS</li>
+                        <li>Gulp</li>
+                        <li>JQuery</li>
+                        <li>AJAX</li>
+                    </ul>
                 </div>
 
-                <div class="project-thumb">
-                    <img src="img/filter-gallery.jpg" alt="thumbnail for Self Sorting Image Gallery project">
-                </div>
+                <img src="img/filter-gallery.jpg" class="project-thumb" alt="thumbnail for Self Sorting Image Gallery project">
 
                 <p>A self sorting image gallery with filters. This app takes image files from a local folder and using RegEx determines the length of days over which they were taken. It then labels them based on the day they were taken and dynamically creates corresponding "filter by day" buttons. Contains more than 550 images.</p>
 
@@ -231,18 +226,16 @@
                 <div class="project-top-row">
                     <h2>Current Weather</h2>
 
-                    <div class="tags">
-                        <div>HTML5/CSS3</div>
-                        <div>SCSS/SASS</div>
-                        <div>Gulp</div>
-                        <div>JQuery</div>
-                        <div>AJAX</div>
-                    </div>
+                    <ul class="tags">
+                        <li>HTML5/CSS3</li>
+                        <li>SCSS/SASS</li>
+                        <li>Gulp</li>
+                        <li>JQuery</li>
+                        <li>AJAX</li>
+                    </ul>
                 </div>
 
-                <div class="project-thumb">
-                    <img src="img/current-weather.jpg" alt="thumbnail for Current Weather project">
-                </div>
+                <img src="img/current-weather.jpg" class="project-thumb" alt="thumbnail for Current Weather project">
 
                 <p>A widget that determines your location and displays the current weather. Also has an input field so you can lookup the current weather conditions of just about any city in the world.</p>
 
@@ -256,16 +249,14 @@
                 <div class="project-top-row">
                     <h2>Frogger Game</h2>
 
-                    <div class="tags">
-                        <div>HTML5/CSS3</div>
-                        <div>Canvas</div>
-                        <div>JavaScript</div>
-                    </div>
+                    <ul class="tags">
+                        <li>HTML5/CSS3</li>
+                        <li>Canvas</li>
+                        <li>JavaScript</li>
+                    </ul>
                 </div>
 
-                <div class="project-thumb">
-                    <img src="img/frogger-game.jpg" alt="thumbnail for Frogger Game project">
-                </div>
+                <img src="img/frogger-game.jpg" class="project-thumb" alt="thumbnail for Frogger Game project">
 
                 <p>A spin on the classic arcade game Frogger made with HTML5 Canvas. You must fight your way through an infinite number of increasingly difficult levels by gathering all the stars and then taking them to the finish. Avoid the enemies! Their numbers grow and they get faster as you progress. Final project from a Udacity online course called Object Oriented JavaScript.</p>
 
@@ -279,17 +270,15 @@
                 <div class="project-top-row">
                     <h2>Inspirational Crystal Ball</h2>
 
-                    <div class="tags">
-                        <div>HTML5/CSS3</div>
-                        <div>SCSS/SASS</div>
-                        <div>JavaScript</div>
-                        <div>AJAX</div>
-                    </div>
+                    <ul class="tags">
+                        <li>HTML5/CSS3</li>
+                        <li>SCSS/SASS</li>
+                        <li>JavaScript</li>
+                        <li>AJAX</li>
+                    </ul>
                 </div>
 
-                <div class="project-thumb">
-                    <img src="img/quote-machine.jpg" alt="thumbnail for Inspirational Crystal Ball project">
-                </div>
+                <img src="img/quote-machine.jpg" class="project-thumb" alt="thumbnail for Inspirational Crystal Ball project">
 
                 <p>A random quote "crystal ball" with a feature to tweet the current quote. The crystal ball effect was created by layering two pseudo element gradients with blur filters applied to them on top of an animated gradient background.</p>
 
@@ -303,16 +292,14 @@
                 <div class="project-top-row">
                     <h2>Tutorial SPA</h2>
 
-                    <div class="tags">
-                        <div>HTML5/CSS3</div>
-                        <div>JavaScript</div>
-                        <div>AngularJS</div>
-                    </div>
+                    <ul class="tags">
+                        <li>HTML5/CSS3</li>
+                        <li>JavaScript</li>
+                        <li>AngularJS</li>
+                    </ul>
                 </div>
 
-                <div class="project-thumb">
-                    <img src="img/tutorial-spa.jpg" alt="thumbnail for Tutorial SPA project">
-                </div>
+                <img src="img/tutorial-spa.jpg" class="project-thumb" alt="thumbnail for Tutorial SPA project">
 
                 <p>A simple single page app created with Angular 1. Walks you through how to make french fries in 5 steps. Branded based on a well-liked burger joint in Scarborough.</p>
 
@@ -417,25 +404,24 @@
 
             <div class="school-wrapper">
                 <h4>Interactive Media Design - Diploma</h3>
-            <h5>Seneca College</h4>
+                <h5>Seneca College</h4>
 
-                <p>Some relevant courses:</p>
-                <div class="tags">
-                    <div>Design Principals I/II</div>
-                    <div>Introduction to Adaptive Web Design</div>
-                    <div>Web Development I/II</div>
-                    <div>Development and Emerging Technologies</div>
-                    <div>User Experience Design I</div>
-                    <div>UX and Interaction Design</div>
-                    <div>Animation and VFX I/II/Advanced</div>
-                </div>
+                <p>Some relevant coursework:</p>
+                <ul class="tags">
+                    <li>Design Principals I/II</li>
+                    <li>Introduction to Adaptive Web Design</li>
+                    <li>Web Development I/II</li>
+                    <li>Development and Emerging Technologies</li>
+                    <li>User Experience Design I</li>
+                    <li>UX and Interaction Design</li>
+                    <li>Animation and VFX I/II/Advanced</li>
+                </ul>
 
             </div>
 
         </section>
 
-    </div>
-    <!--CLOSE .page-wrapper-->
+    </div> <!--CLOSE .page-wrapper-->
 
     <div id="contact-spacer"></div>
 
@@ -445,19 +431,13 @@
 
             <h3>Let's get in touch.</h3>
 
-            <div class="contact-link">
-                <a href="mailto:c.laing@live.com"><i class="fa fa-envelope" aria-hidden="true"></i><p>c.laing@live.com</p></a>
-            </div>
+            <a href="mailto:c.laing@live.com" target="_blank" class="contact-link"><i class="fa fa-envelope" aria-hidden="true"></i><p>c.laing@live.com</p></a>
 
             <br>
 
-            <div class="contact-link">
-                <a href="https://www.linkedin.com/in/cameronallanlaing" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-            </div>
+            <a href="https://www.linkedin.com/in/cameronallanlaing" target="_blank" class="contact-link"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
 
-            <div class="contact-link">
-                <a href="https://github.com/cam664" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-            </div>
+            <a href="https://github.com/cam664" target="_blank" class="contact-link"><i class="fa fa-github" aria-hidden="true"></i></a>
 
         </div>
 
