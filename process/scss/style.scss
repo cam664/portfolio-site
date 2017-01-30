@@ -18,20 +18,12 @@ $yellow: #DBAD6A;
 $black-lightest: #4a4a4a;
 $black-light: #3a3a3a;
 $black-dark: #3d3d3d;
-@keyframes heading {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 0.95;
-    }
-}
-a {
-    display: inline-block;
-}
 body {
     font-size: 62.5%;
     width: 100%;
+}
+a {
+    display: inline-block;
 }
 nav {
     height: 70px;
@@ -370,7 +362,6 @@ main {
         padding: 7px 8px;
         margin-right: 10px;
         margin-top: 7px;
-        text-align: center;
         &:last-of-type {
             margin-right: 20px;
         }
@@ -560,6 +551,10 @@ main {
     bottom: 28px;
     filter: drop-shadow(0 3.5px 3px rgba(0, 0, 0, 0.29));
     transition: 0.2s all ease-in-out;
+    &:hover {
+        transform: rotateX(-65deg) translate(0, -7px);
+        filter: drop-shadow(0 7.5px 3px rgba(0, 0, 0, 0.18));
+    }
     @include for-tablet-landscape-down {
         width: 87px;
         bottom: 18px;
@@ -572,7 +567,7 @@ main {
         transform: rotateX(0deg);
         &:hover {
             transform: rotateX(0) translate(0);
-            filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+            filter: drop-shadow(0 3.5px 3px rgba(0, 0, 0, 0.29));
         }
     }
     &.shrink {
@@ -586,11 +581,7 @@ main {
             width: 63px;
             padding-bottom: 0;
         }
-    }
-    &:hover {
-        transform: rotateX(-65deg) translate(0, -7px);
-        filter: drop-shadow(0 7.5px 3px rgba(0, 0, 0, 0.18));
-    }
+    } 
 }
 #school {
     @include clearfix();
@@ -694,7 +685,6 @@ main {
         }
     }
     i {
-        color: #fff;
         font-size: 2.8rem;
         padding: 0 20px 0 10px;
         @include for-phone-down {
@@ -706,7 +696,6 @@ main {
         font-weight: 500;
         font-family: 'Lato', sans-serif;
         font-size: 2.5rem;
-        color: #fff;
         letter-spacing: 1px;
         display: inline-block;
         padding-bottom: 20px;
@@ -715,10 +704,11 @@ main {
         }
     }
     .contact-link {
-        transition: 0.2s all ease-in-out;
+        color: rgba(255,255,255,0.75);
+        transition: 0.1s all ease-in-out;
         display: inline-block;
         &:hover {
-            transform: translateY(-3px) scale(1.05);
+            color: rgba(255,255,255,1);
         }
     }
 }

@@ -101,7 +101,7 @@ $(document).on('scroll', function () {
 //smooth scroll to anchor elements
 $('a[href^="#"]').on('click', function (event) {
     var target = $(this.getAttribute('href')),
-        offSet = 50;
+        offSet = 40;
 
     if (target.length) {
 
