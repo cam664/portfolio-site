@@ -94,71 +94,6 @@ nav {
         top: -50px;
     }
 }
-.nav-effect:before,
-.nav-effect:after {
-    position: absolute;
-    opacity: 0;
-    width: 0%;
-    height: 2px;
-    content: '';
-    background: $blue-light;
-    transition: all 0.3s;
-}
-.nav-effect:before {
-    left: 0px;
-    top: -2px;
-}
-.nav-effect:after {
-    right: 0px;
-    bottom: -2px;
-}
-.nav-effect:hover:before,
-.nav-effect:hover:after {
-    opacity: 1;
-    width: 100%;
-}
-
-.nav-active:before,
-.nav-active:after {
-    position: absolute;
-    opacity: 1;
-    width: 100%;
-    height: 2px;
-    content: '';
-    background: $blue-light;
-    transition: all 0.3s;
-    }
-.nav-active:before {
-    left: 0px;
-    top: -2px;
-}
-.nav-active:after {
-    right: 0px;
-    bottom: -2px;
-}
-.main-nav {
-    text-decoration: none;
-    display: inline-flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    li {
-        font-family: 'Montserrat';
-        font-size: 1.2rem;
-        color: $black-light;
-        display: inline-block;
-        @include for-tablet-portrait-down {
-            padding: 5%;
-        }
-        @include for-phone-down {
-            font-size: 1rem;
-            padding: 0 4% 0;
-        }
-        @include for-small-phone-only {
-            padding: 0 3px 0;
-        }
-    }
-}
 header {
     overflow: hidden;
     position: relative;
@@ -285,6 +220,71 @@ header {
     &:hover {
         border: 2px solid $blue-light;
         background-color: $blue-lightest;
+    }
+}
+.nav-effect:before,
+.nav-effect:after {
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: '';
+    background: $blue-light;
+    transition: all 0.3s;
+}
+.nav-effect:before {
+    left: 0px;
+    top: -2px;
+}
+.nav-effect:after {
+    right: 0px;
+    bottom: -2px;
+}
+.nav-effect:hover:before,
+.nav-effect:hover:after {
+    opacity: 1;
+    width: 100%;
+}
+
+.nav-active:before,
+.nav-active:after {
+    position: absolute;
+    opacity: 1;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background: $blue-light;
+    transition: all 0.3s;
+    }
+.nav-active:before {
+    left: 0px;
+    top: -2px;
+}
+.nav-active:after {
+    right: 0px;
+    bottom: -2px;
+}
+.main-nav {
+    text-decoration: none;
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    li {
+        font-family: 'Montserrat';
+        font-size: 1.2rem;
+        color: $black-light;
+        display: inline-block;
+        @include for-tablet-portrait-down {
+            padding: 5%;
+        }
+        @include for-phone-down {
+            font-size: 1rem;
+            padding: 0 4% 0;
+        }
+        @include for-small-phone-only {
+            padding: 0 3px 0;
+        }
     }
 }
 main {
