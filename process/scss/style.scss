@@ -1,14 +1,5 @@
-@font-face {
-    font-family: 'heading italic';
-    src: url('fonts/SFProverbialGothicExtended-.ttf');
-}
-@font-face {
-    font-family: 'heading';
-    src: url('fonts/SFProverbialGothicExtended.ttf');
-}
 @import 'reset.scss';
 @import 'mixins.scss';
-@import 'logo-anim.scss';
 $bright-blue: lighten(#3D7EAA,10);
 $blue-lightest: lighten(#2c3e50,36);
 $blue-light: lighten(#2c3e50,22);
@@ -73,155 +64,6 @@ nav {
         }
     }
 }
-.no-scroll {
-    position: fixed;
-    overflow-y: scroll;
-}
-.loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: z(loading-screen);
-    display: flex;
-    background: #fff;
-    justify-content: center;
-    align-items: center;
-    svg {
-        position: relative;
-        top: -50px;
-    }
-}
-header {
-    overflow: hidden;
-    position: relative;
-    height: 100vh;
-    background: url(../img/yellow-bg.jpg);
-    cursor: default;
-    background-size: cover;
-    background-position: center;
-}
-.logo-svg {
-    transform-origin: center center;
-    filter: drop-shadow(0px 1px 2px $yellow)
-}
-.tilt-container {
-    transform-style: preserve-3d;
-    perspective: 500px;
-    transition: all 0.35s ease-out;
-    margin: 0 auto;
-}
-.logo-wrapper {
-    position: relative;
-    overflow: hidden;
-    width: 70%;
-    margin: 0 auto;
-    transform-origin: center center;
-    transition: all 2s ease-out;
-    @include for-tablet-landscape-down {
-        width: 100%;
-    }
-    @include for-phone-down {
-        width: 135%;
-        position: relative;
-        transform: translate(-50%, 0);
-        left: 50%;
-    }
-}
-.heading-wrapper {
-    z-index: z(heading-wrapper);
-    display: block;
-    width: 70%;
-    text-align: center;
-    margin: 0 auto;
-    @include for-tablet-landscape-down {
-        width: 85%;
-    }
-}
-.heading-primary {
-    margin: -80px auto;
-    font-family: 'heading italic', sans-serif;
-    font-weight: 700;
-    font-size: 8.5rem;
-    letter-spacing: 5px;
-    color: $blue-light;
-    text-shadow: -0.5px -0.5px 3px $yellow;
-    @include for-small-laptop-down {
-        font-size: 7rem;
-        margin: -75px auto;
-    }
-    @include for-tablet-portrait-down {
-        font-size: 7.5rem;
-        margin: -20px auto;
-    }
-    @include for-phone-down {
-        font-size: 4rem;
-        margin: -15px auto;
-    }
-    @media (min-width: 1750px) {
-        font-size: 10rem;
-    }
-}
-.heading-sub {
-    font-weight: 700;
-    font-family: 'heading', sans-serif;
-    font-size: 5rem;
-    letter-spacing: 3px;
-    color: $blue-lightest;
-    text-shadow: -0.5px -0.5px 3px $yellow;
-    margin: 120px auto 40px;
-    @include for-small-laptop-down {
-        font-size: 3.5rem;
-        margin: 90px auto 30px;
-    }
-    @include for-tablet-portrait-down {
-        font-size: 4rem;
-        margin: 80px auto 55px;
-    }
-    @include for-phone-down {
-        font-size: 2.4rem;
-        margin: 40px auto 35px;
-    }
-    @media (min-width: 1750px) {
-        font-size: 6.5rem;
-    }
-}
-.depth-1 {
-    transform: translateZ(30px)
-}
-.horizontal-center {
-    position: relative;
-    transform: translate(-50%, 0);
-    left: 50%;
-}
-.project-btn {
-    background-color: $blue-light;
-    border-radius: 28px;
-    transform-origin: center center;
-    border: 2px solid $blue-lightest;
-    display: inline-block;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    color: #fff;
-    font-family: 'heading';
-    font-size: 1.5rem;
-    padding: 10px 35px 10px 40px;
-    text-decoration: none;
-    letter-spacing: 2px;
-    text-shadow: -0.2px -0.2px 1px $yellow;
-    box-shadow: -0.3px -0.3px 2px $yellow;
-    margin: 0 auto;
-    @include for-phone-down {
-        font-size: 1.1rem;
-        padding: 7px 30px 7px 35px;
-    }
-    &:hover {
-        border: 2px solid $blue-light;
-        background-color: $blue-lightest;
-    }
-}
 .nav-effect:before,
 .nav-effect:after {
     position: absolute;
@@ -245,7 +87,6 @@ header {
     opacity: 1;
     width: 100%;
 }
-
 .nav-active:before,
 .nav-active:after {
     position: absolute;
@@ -461,6 +302,7 @@ main {
 .page-wrapper {
     background: #fff;
     position: relative;
+    display: block;
     z-index: z(page-wrapper);
 }
 #skills {
