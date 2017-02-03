@@ -2,15 +2,6 @@
 //after page load: play logo animation and hide loading screen 
 $(window).on('load', function () {
 
-    $('.loading-screen').fadeOut('400');
-
-    $('#shape-1').addClass('anim-shape-1');
-    $('#shape-2').addClass('anim-shape-2');
-    $('#shape-3').addClass('anim-shape-3');
-    $('#shape-4').addClass('anim-shape-4');
-    $('#shape-5').addClass('anim-shape-5');
-    $('#shape-6').addClass('anim-shape-6');
-
     $('body').removeClass('no-scroll');
 
 });
@@ -51,7 +42,6 @@ setTimeout(function () {
 $(document).on('scroll', function () {
     var distance = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0,
         height = $('body').outerHeight(true),
-        tabletPortrait = 4730,
         $nav = $('nav'),
         offset = 350,
         $navProjects = $('.nav-projects'),
@@ -66,9 +56,9 @@ $(document).on('scroll', function () {
 
     //navbar show/hide toggle
     if (distance >= 50) {
-        $nav.css('transform', 'translate(0, 0)');
+        $nav.css("transform", "translate(0, 0)");
     } else {
-        $nav.css('transform', 'translate(0, -146px)');
+        $nav.css("transform", "translate(0, -146px)");
     }
 
     //nav section indicator
