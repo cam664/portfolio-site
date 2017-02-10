@@ -37,38 +37,39 @@ nav {
     justify-content: space-around;
     align-items: center;
     @include for-tablet-landscape-down {
-        padding: 0 13% 0;
+        padding: 0 5% 0;
     }
     @include for-phone-down {
         height: 50px;
+        padding: 0 0.7% 0;
     }
     img {
         height: 125px;
         margin-top: 18px;
-        padding: 0;
         @include for-phone-down {
             height: 90px;
+            margin-top: 18px;
         }
         @include for-small-phone-only {
             height: 75px;    
         }
     }
+    & > a {
+        margin: 0 7% 0;
+        @include for-phone-down {
+            margin: 0 1% 0;
+        }
+        @include for-small-phone-only {
+            margin: 0 0% 0;    
+        }   
+    }
     a {
         position: relative;
         color: $black-light;
     }
-    & > a {
-        padding: 0 10% 0;
-        @include for-tablet-landscape-down {
-            padding: 9%;
-        }
-        @include for-tablet-portrait-down {
-            padding: 5%;
-        }
-        @include for-phone-down {
-            padding: 0;  
-        }
-    }
+}
+header {
+    overflow: hidden;
 }
 .nav-effect:before,
 .nav-effect:after {
@@ -114,7 +115,7 @@ nav {
 .main-nav {
     text-decoration: none;
     display: inline-flex;
-    width: 100%;
+    width: 50%;
     align-items: center;
     justify-content: space-between;
     li {
@@ -501,7 +502,6 @@ main {
     width: 50%;
     max-width: 970px;
     position: relative;
-    top: -30px;
     text-align: center;
     background-size: 5% auto;
     background-position: left top, right bottom;
@@ -527,10 +527,10 @@ main {
         }
     }
     i {
-        font-size: 2.8rem;
-        padding: 0 20px 0 10px;
+        font-size: 2.6rem;
+        padding: 0 15px 0;
         @include for-phone-down {
-            font-size: 2.4rem;
+            font-size: 2.2rem;
             padding: 0 20px 5px 10px;
         }
     }
@@ -550,6 +550,47 @@ main {
         transition: 0.1s all ease-in-out;
         display: inline-block;
         &:hover {
+            color: rgba(255,255,255,1);
+        }
+    }
+}
+.contact-form {
+    width: 60%;
+    margin: 35px auto;
+    input, textarea, button {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        font-family: 'Montserrat';
+        font-size: 1rem;
+        color: #fff;
+        background: transparent;
+        border: 0;
+        padding: 4px;
+        outline: none;  
+        &::placeholder {
+        color: #ddd;
+        }
+    }
+    input {
+        border-bottom: 2px solid $purple;
+    }
+    textarea {
+        border-bottom: 2px solid $purple;
+        min-height: 140px;
+    }
+    button {
+        box-sizing: border-box;
+        color: #fff;
+        width: 80px;
+        min-height: 35px;
+        cursor: pointer;
+        border: 2px solid $purple;
+        border-radius: 7px;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            border: 0;
+            background: $purple;
             color: rgba(255,255,255,1);
         }
     }
