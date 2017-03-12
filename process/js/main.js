@@ -15,16 +15,15 @@ function init() {
     function logoTilt() {
         $(document).mousemove(function (e) {
             var $tiltCont = $('.tilt-container'),
-                $header = $('header'),
-
-                objLeft = $tiltCont.offset().left,
-                objTop = $tiltCont.offset().top,
-
-                objCenterX = objLeft + $tiltCont.width() / 2,
-                objCenterY = objTop + $tiltCont.height() / 2,
-
+                $header = $('#home'),
+                objLeft = $header.offset().left,
+                objTop = $header.offset().top,
+                objCenterX = objLeft + $header.width() / 2,
+                objCenterY = objTop + $header.height() / 2,
                 rotate_X,
-                rotate_Y;
+                rotate_Y,
+                translate_X,
+                translate_Y;
 
             if (e.pageX > $header.width() + 50 || e.pageX <= 0 || e.pageY > $header.height() + 50 || e.pageY <= 0) {
                 rotate_X = 0;
@@ -32,12 +31,14 @@ function init() {
             } else {
                 rotate_X = (e.pageX - objCenterX) / 90;
                 rotate_Y = (-e.pageY - objCenterY) / 90;
+                translate_X = -(e.pageX - objCenterX) / 70;
+                translate_Y = (e.pageY - objCenterY) / 90;
+
             }
 
-            $tiltCont.css('transform', 'rotateX(' + rotate_Y + 'deg) rotateY(' + rotate_X + 'deg)');
-
+            $tiltCont.css('transform', 'rotateX(' + rotate_Y + 'deg) rotateY(' + rotate_X + 'deg) translateX(' + translate_X + 'px) translateY(' + translate_Y +'px)')
         });
-    }
+    };    
 
     setTimeout(function () {
         logoTilt();
@@ -53,8 +54,6 @@ function init() {
             $elProjects = $('#projects'),
             $navAbout = $('.nav-about'),
             $elAbout = $('#about'),
-            $navSkills = $('.nav-skills'),
-            $elSkills = $('#skills'),
             $navContact = $('.nav-contact'),
             $elContact = $('#contact-spacer'),
             $elSchool = $('#school');
@@ -77,12 +76,6 @@ function init() {
             $navAbout.addClass('nav-active');
         } else {
             $navAbout.removeClass('nav-active');
-        }
-
-        if (distance + offset > $elSkills.offset().top && distance + offset < $elSkills.offset().top + ($elSkills.outerHeight(true) + $elSchool.outerHeight(true))) {
-            $navSkills.addClass('nav-active');
-        } else {
-            $navSkills.removeClass('nav-active');
         }
 
         if (distance + offset > $elContact.offset().top) {
