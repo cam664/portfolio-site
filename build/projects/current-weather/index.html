@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Widget | Cameron Laing, Front End Web Development, Web Design, Toronto Canada</title>
+    <meta name="description" content="A widget that determines your location and displays the current weather. Also has an input field so you can lookup the current weather conditions of just about any city in the world.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="Cameron Laing">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/weather-icons.min.css">
+</head>
+<body>
+
+    <div class='container'>
+    
+        <div class="temp-low">
+            <span id="low-data"></span><span>°</span><br>Low
+        </div>
+        
+        <div class="temp-main">
+            <span id="temp-data"></span><span>°</span><br>Current<br>
+            <span id="icon"><i class=""></i></span><br>
+            <span id="desc"></span>
+        </div>
+        
+        <div class="temp-high">
+            <span id="high-data"></span><span>°</span><br>High
+        </div>
+        
+        <div class="wind-speed">
+            <span id="wind-data"></span><span class="small-wind">m/s</span><br>Wind speed
+        </div>
+        
+        <div class="humidity">
+            <span id="humid-data"></span><span class="small">%</span><br>Humidity
+        </div>
+        
+        <div class="city">
+            <span id="city-data"></span><br>
+            
+            <input type="text" value="New City" id="new-city-form">
+            <button id="new-city-btn">Go</button>
+                 
+        </div>
+        
+    </div>
+    
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+<script type="text/javascript" src="js/app.js"></script>    
+</body>
+</html>
