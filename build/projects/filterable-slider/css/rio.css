@@ -1,0 +1,60 @@
+body {
+   background: #e5e5e5
+}
+
+.specs-container {
+   font-family: "DesignKOTFL";
+   color: #464646;
+   margin: 50px auto 20px;
+   height: auto
+}
+
+.specs-container h1 {
+   margin: 0px;
+   margin-bottom: 25px;
+   font-family: "DesignKOTFM";
+   font-size: 36px;
+   font-weight: 700
+}
+
+.specs-container hr {
+   height: 2px;
+   border: 0 none;
+   background-color: #959595;
+   margin-bottom: 37px
+}
+/*
+.specs-container li {
+   width: auto
+}
+*/
+.specs-container ul {
+   -webkit-padding-start: 20px
+}
+
+@media (max-width: 1370px) {
+   .specs-container ul {
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      margin: 0 auto
+   }
+}
+
+@media (max-width: 1025px) {
+   .specs-container ul {
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      margin: 0 auto
+   }
+}
+
+.gallery-container {
+   width: 70%;
+   margin: 0 auto
+}
+
+@media (max-width: 1370px) {
+   .gallery-container {
+      width: 90%
+   }
+}

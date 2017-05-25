@@ -17,7 +17,7 @@
     <meta name="msapplication-config" content="favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <style>
-        .page-wrapper { display: none; } nav { display: none; } #contact { display: none; } @font-face { font-family: 'heading italic'; src: url('css/fonts/SFProverbialGothicExtended-.ttf');}@font-face { font-family: 'heading'; src: url('css/fonts/SFProverbialGothicExtended.ttf');} @keyframes shapeFlip1 { from { transform: rotate3d(-1.732,1,0,90deg); } to { transform: rotate3d(-1.732,1,0,0deg); }} @keyframes shapeFlipY { from { transform: rotate3d(0,1,0,90deg); } to { transform: rotate3d(0,1,0,0deg); }}@keyframes shapeFlip3 { from { transform: rotate3d(1.732,1,0,90deg); } to { transform: rotate3d(1.732,1,0,0deg); }}@keyframes shapeFlip4 { from { transform: rotate3d(-1.732,1,0,90deg); } to { transform: rotate3d(-1.732,1,0,0deg); }}@keyframes shapePop6 { 0% { transform: scale(0.1); } 2% { opacity: 1; } 20% { transform: scale(1.45); } 33% { transform: scale(1.45) rotate(0turn); } 85% { transform: scale(1) rotate(2turn); } 100% { transform: rotate(0turn); opacity: 1; }} .anim-shape-1 { animation: 0.2s ease-out 0.4s forwards shapeFlip1;}.anim-shape-2 { animation: 0.2s ease-out 0.6s forwards shapeFlipY;}.anim-shape-3 { animation: 0.2s ease-out 0.8s forwards shapeFlip3;}.anim-shape-4 { animation: 0.2s ease-out 1.0s forwards shapeFlip4;}.anim-shape-5 { animation: 0.2s ease-out 1.2s forwards shapeFlipY;}.anim-shape-6 { animation: 0.7s ease-in-out 1.4s forwards shapePop6;}#shape-1 { fill: #6192ff; transform-origin: left bottom; transform: rotate3d(-1.732 , 1 , 0 , 90deg); }#shape-2 { fill: #5b7be2; transform-origin: right bottom; transform: rotate3d(0,1,0,90deg);} #shape-3 { fill: #5874ca; transform-origin: left top; transform: rotate3d(1.732,1,0,90deg);}#shape-4 { fill: #546AB2; transform-origin: right top; transform: rotate3d(-1.732 , 1 , 0 , 90deg);}#shape-5 { fill: #4b609a; transform-origin: left top; transform: rotate3d(0,1,0,90deg);}#shape-6 { fill: #6282ff; transform-origin: left center; opacity: 0;}@-moz-document url-prefix() { #shape-1 { fill: #6192ff; transform-origin: center; transform: rotate3d(-1.732 , 1 , 0 , 90deg); } #shape-2 { fill: #5b7be2; transform-origin: center; transform: rotate3d(0,1,0,90deg); } #shape-3 { fill: #5874ca; transform-origin: center; transform: rotate3d(1.732,1,0,90deg); } #shape-4 { fill: #546AB2; transform-origin: center; transform: rotate3d(-1.732 , 1 , 0 , 90deg); } #shape-5 { fill: #4b609a; transform-origin: center ; transform: rotate3d(0,1,0,90deg); } #shape-6 { fill: #6282ff; transform-origin: center; opacity: 0; }} .no-scroll { position: fixed; overflow-y: scroll;}#loading-screen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 1000; display: flex; background: #fff; justify-content: center; align-items: center; transition: all 0.45s ease-in;} .loading-screen svg { position: relative; top: -50px; }header { overflow: hidden; position: relative; height: 100vh; background: url(img/yellow-bg.jpg); cursor: default; background-size: cover; background-position: center;}.logo-svg { transform-origin: center center; filter: drop-shadow(0px 1px 2px #DBAD6A)}.tilt-container { transform-style: preserve-3d; perspective: 500px; transition: all 0.65s ease-out; margin: 0 auto;}.logo-wrapper { position: relative; overflow: hidden; width: 70%; margin: 0 auto; transform-origin: center center; transition: all 2s ease-out;}.heading-wrapper { z-index: 1; display: block; width: 80%; text-align: center; margin: 0 auto;}.heading-primary { margin: -80px auto; font-family: 'heading italic', sans-serif; font-weight: 700; font-size: 8.5rem; letter-spacing: 5px; color: #547698; text-shadow: -0.5px -0.5px 3px #DBAD6A;}.heading-sub { font-weight: 700; font-family: 'heading', sans-serif; font-size: 5rem; letter-spacing: 3px; color: #7c9ab7; text-shadow: -0.5px -0.5px 3px #DBAD6A; margin: 120px auto 40px;}.depth-1 { transform: translateZ(50px)}.horizontal-center { position: relative; transform: translate(-50%, 0); left: 50%;}.project-btn { background-color: #547698; border-radius: 28px; transform-origin: center center; border: 2px solid #7c9ab7; display: inline-block; cursor: pointer; transition: all 0.2s ease-in-out; color: #fff; font-family: 'heading'; font-size: 1.5rem; padding: 10px 35px 10px 40px; text-decoration: none; letter-spacing: 2px; text-shadow: -0.2px -0.2px 1px #DBAD6A; box-shadow: -0.3px -0.3px 2px #DBAD6A; margin: 0 auto;} .project-btn:hover { border: 2px solid #547698; background-color: #7c9ab7; } @media (min-width: 1750px) { .logo-wrapper{ width: 55%;} .heading-primary{ font-size: 10rem;} .heading-sub { font-size: 6.5rem; } } @media (max-width: 1400px) { .heading-primary{ font-size: 7rem; margin: -75px auto; } .heading-sub{ font-size: 3.5rem; margin: 100px auto 30px;} .project-btn {margin: -10px auto 0}} @media (max-width: 900px) { .heading-primary{ font-size: 7.5rem; margin: -20px auto;} .heading-sub{ font-size: 4rem; margin: 100px auto 55px; } .logo-wrapper{ width: 100%;} .heading-wrapper{width: 90%}} @media (max-width: 599px) { .logo-wrapper { width: 135%; position: relative; transform: translate(-50%, 0); left: 50%; } .heading-primary{font-size: 4rem; margin: -15px auto;} .heading-sub{ font-size: 2.4rem; margin: 40px auto 35px; } .project-btn{  font-size: 1.1rem; padding: 7px 30px 7px 35px; } .logo-wrapper{width: 135%; position: relative; transform: translate(-50%, 0); left: 50%;} }
+        .page-wrapper { display: none; } nav { display: none; } #contact { display: none; } @font-face { font-family: 'heading italic'; src: url('css/fonts/SFProverbialGothicExtended-.ttf');}@font-face { font-family: 'heading'; src: url('css/fonts/SFProverbialGothicExtended.ttf');} @keyframes shapeFlip1 { from { transform: rotate3d(-1.732,1,0,90deg); } to { transform: rotate3d(-1.732,1,0,0deg); }} @keyframes shapeFlipY { from { transform: rotate3d(0,1,0,90deg); } to { transform: rotate3d(0,1,0,0deg); }}@keyframes shapeFlip3 { from { transform: rotate3d(1.732,1,0,90deg); } to { transform: rotate3d(1.732,1,0,0deg); }}@keyframes shapeFlip4 { from { transform: rotate3d(-1.732,1,0,90deg); } to { transform: rotate3d(-1.732,1,0,0deg); }}@keyframes shapePop6 { 0% { transform: scale(0.1); } 2% { opacity: 1; } 20% { transform: scale(1.45); } 33% { transform: scale(1.45) rotate(0turn); } 85% { transform: scale(1) rotate(2turn); } 100% { transform: rotate(0turn); opacity: 1; }} .anim-shape-1 { animation: 0.2s ease-out 0.4s forwards shapeFlip1;}.anim-shape-2 { animation: 0.2s ease-out 0.6s forwards shapeFlipY;}.anim-shape-3 { animation: 0.2s ease-out 0.8s forwards shapeFlip3;}.anim-shape-4 { animation: 0.2s ease-out 1.0s forwards shapeFlip4;}.anim-shape-5 { animation: 0.2s ease-out 1.2s forwards shapeFlipY;}.anim-shape-6 { animation: 0.7s ease-in-out 1.4s forwards shapePop6;}#shape-1 { fill: #6192ff; transform-origin: left bottom; transform: rotate3d(-1.732 , 1 , 0 , 90deg); }#shape-2 { fill: #5b7be2; transform-origin: right bottom; transform: rotate3d(0,1,0,90deg);} #shape-3 { fill: #5874ca; transform-origin: left top; transform: rotate3d(1.732,1,0,90deg);}#shape-4 { fill: #546AB2; transform-origin: right top; transform: rotate3d(-1.732 , 1 , 0 , 90deg);}#shape-5 { fill: #4b609a; transform-origin: left top; transform: rotate3d(0,1,0,90deg);}#shape-6 { fill: #6282ff; transform-origin: left center; opacity: 0;}@-moz-document url-prefix() { #shape-1 { fill: #6192ff; transform-origin: center; transform: rotate3d(-1.732 , 1 , 0 , 90deg); } #shape-2 { fill: #5b7be2; transform-origin: center; transform: rotate3d(0,1,0,90deg); } #shape-3 { fill: #5874ca; transform-origin: center; transform: rotate3d(1.732,1,0,90deg); } #shape-4 { fill: #546AB2; transform-origin: center; transform: rotate3d(-1.732 , 1 , 0 , 90deg); } #shape-5 { fill: #4b609a; transform-origin: center ; transform: rotate3d(0,1,0,90deg); } #shape-6 { fill: #6282ff; transform-origin: center; opacity: 0; }} .no-scroll { position: fixed; overflow-y: scroll;}#loading-screen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 1000; display: flex; background: #fff; justify-content: center; align-items: center; transition: all 0.45s ease-in;} .loading-screen svg { position: relative; top: -50px; }header { overflow: hidden; position: relative; height: 100vh; background: url(img/yellow-bg.jpg); cursor: default; background-size: cover; background-position: center;}.logo-svg { transform-origin: center center; filter: drop-shadow(0px 1px 2px #DBAD6A)}.tilt-container { transform-style: preserve-3d; perspective: 500px; transition: all 0.65s ease-out; margin: 0 auto;}.logo-wrapper { position: relative; overflow: hidden; width: 70%; margin: 0 auto; transform-origin: center center; transition: all 2s ease-out;}.heading-wrapper { z-index: 1; display: block; width: 80%; text-align: center; margin: 0 auto;}.heading-primary { margin: -80px auto; font-family: 'heading italic', sans-serif; font-weight: 700; font-size: 8.5rem; letter-spacing: 5px; color: #547698; text-shadow: -0.5px -0.5px 3px #DBAD6A;}.heading-sub { font-weight: 700; font-family: 'heading', sans-serif; font-size: 5rem; letter-spacing: 3px; color: #7c9ab7; text-shadow: -0.5px -0.5px 3px #DBAD6A; margin: 120px auto 40px;} .depth-1 { transform: translateZ(50px)}.horizontal-center { position: relative; transform: translate(-50%, 0); left: 50%;}.project-btn { background-color: #547698; border-radius: 28px; transform-origin: center center; border: 2px solid #7c9ab7; display: inline-block; cursor: pointer; transition: all 0.2s ease-in-out; color: #fff; font-family: 'heading'; font-size: 1.5rem; padding: 10px 35px 10px 40px; text-decoration: none; letter-spacing: 2px; text-shadow: -0.2px -0.2px 1px #DBAD6A; box-shadow: -0.3px -0.3px 2px #DBAD6A; margin: 0 auto;} .project-btn:hover { border: 2px solid #547698; background-color: #7c9ab7; } @media (min-width: 1750px) { .logo-wrapper{ width: 55%;} .heading-primary{ font-size: 10rem;} .heading-sub { font-size: 6.5rem; } } @media (max-width: 1400px) { .heading-primary{ font-size: 7rem; margin: -75px auto; } .heading-sub{ font-size: 3.5rem; margin: 100px auto 30px;} .project-btn {margin: -10px auto 0}} @media (max-width: 900px) { .heading-primary{ font-size: 7.5rem; margin: -20px auto;} .heading-sub{ font-size: 4rem; margin: 100px auto 55px; } .logo-wrapper{ width: 100%;} .heading-wrapper{width: 90%}} @media (max-width: 599px) { .logo-wrapper { width: 135%; position: relative; transform: translate(-50%, 0); left: 50%; } .heading-primary{font-size: 4rem; margin: -15px auto;} .heading-sub{ font-size: 2.4rem; margin: 40px auto 35px; } .project-btn{  font-size: 1.1rem; padding: 7px 30px 7px 35px; } .logo-wrapper{width: 135%; position: relative; transform: translate(-50%, 0); left: 50%;} }
     </style>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -177,7 +177,7 @@
                 </div>
 
                 <div class="heading-wrapper heading-sub">
-                    <h1>Front-End Web Development</h1>
+                    <h1>Front End Development</h1>
                 </div>
 
                 <a href="#projects" class="horizontal-center">
@@ -224,30 +224,30 @@
                 </div>
             </a>
 
-            <a class="block-link" href="projects/current-weather/index.html" target="_blank">
+            <a class="block-link" href="projects/filterable-slider/index.html" target="_blank">
                 <div class="project-item">
-
-                    <img src="img/current-weather.jpg" class="project-thumb" alt="thumbnail for Current Weather project">
+                    
+                    <div class="filter filter-icon"><i class="fa fa-star" aria-hidden="true"></i><div class="filter-inner">Featured</div></div>
+        
+                    <img src="img/car-slider.jpg" class="project-thumb" alt="thumbnail for Car Slider project">
 
                     <div class="project-info">
 
                         <div class="project-top-row">
-                            <h2>Weather Widget</h2>
+                            <h2>Filterable Slider</h2>
 
                             <ul class="tags">
                                 <li>HTML5/CSS3</li>
                                 <li>SCSS/Sass</li>
-                                <li>Gulp</li>
                                 <li>JQuery</li>
-                                <li>AJAX</li>
                             </ul>
                         </div>
-                        <p>A widget that determines your location and displays the current weather. Also has an input field so you can lookup
-                            the current weather conditions of just about any city in the world.</p>
 
-                        <a class="icon-link" href="https://github.com/cam664/current-weather" target="_blank"><i class="fa fa-github"></i>GitHub</a>
+                        <p>A custom built slider component for displaying vehicle model trim packages. Accepts any number of elements with a "trim" class name and class names that specify the features of that particular trim package. It is fully mobile responsive with the ability to navigate using a swipe on mobile and the arrow keys on desktop.</p>
+                        <a class="icon-link" href="https://github.com/cam664/dynamic-filterable-slider" target="_blank"><i class="fa fa-github"></i>GitHub</a>
 
                     </div>
+
 
                 </div>
             </a>
@@ -271,6 +271,34 @@
                             number of increasingly difficult levels by gathering all the stars and then taking them to the finish. Avoid
                             the enemies! Their numbers grow and they get faster as you progress.</p>
                         <a class="icon-link" href="https://github.com/cam664/object-oriented-frogger-style-arcade-game" target="_blank"><i class="fa fa-github"></i>GitHub</a>
+
+                    </div>
+
+                </div>
+            </a>
+
+            <a class="block-link" href="projects/current-weather/index.html" target="_blank">
+                <div class="project-item">
+
+                    <img src="img/current-weather.jpg" class="project-thumb" alt="thumbnail for Current Weather project">
+
+                    <div class="project-info">
+
+                        <div class="project-top-row">
+                            <h2>Weather Widget</h2>
+
+                            <ul class="tags">
+                                <li>HTML5/CSS3</li>
+                                <li>SCSS/Sass</li>
+                                <li>Gulp</li>
+                                <li>JQuery</li>
+                                <li>AJAX</li>
+                            </ul>
+                        </div>
+                        <p>A widget that determines your location and displays the current weather. Also has an input field so you can lookup
+                            the current weather conditions of just about any city in the world.</p>
+
+                        <a class="icon-link" href="https://github.com/cam664/current-weather" target="_blank"><i class="fa fa-github"></i>GitHub</a>
 
                     </div>
 
